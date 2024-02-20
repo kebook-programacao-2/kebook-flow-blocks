@@ -321,7 +321,7 @@ const PAYLOAD: Payload = {
          },
          {
             "command": "run_flow",
-            "enabled": true,
+            "enabled": false,
             "flow": "set_expiration_date"
          },
          {
