@@ -6,6 +6,7 @@ import { JivoCreateChannelBlock } from "./JivoCreateChannelBlock";
 import { YTEvalDurationScraperConverterBlock } from "./YTEvalDurationScraperConverterBlock";
 import { KiwifyLoginBlock } from "./KiwifyLoginBlock";
 import { KiwifyCreateCampaignsBlock } from "./KiwifyCreateCampaignsBlock";
+import { YouTubeScrapePlaylistDataBlock } from "./YouTubeScrapePlaylistDataBlock";
 
 export const FlowBlocks = [
    EduzzLoginBlock,
@@ -15,5 +16,6 @@ export const FlowBlocks = [
    JivoCreateChannelBlock,
    KiwifyLoginBlock,
    KiwifyCreateCampaignsBlock,
-   YTEvalDurationScraperConverterBlock
+   YTEvalDurationScraperConverterBlock,
+   YouTubeScrapePlaylistDataBlock
 ];

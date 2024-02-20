@@ -65,9 +65,10 @@ const PAYLOAD: Payload = {
 };
 
 export const YTEvalDurationScraperConverterBlock = {
-    title: 'YT Eval Duration Scraper Converter Block',
+    title: 'YouTube - Extrair durações',
     block_id: 'c222151f-fc54-49d6-9c67-e2f7532a0d3e',
-    description: 'Scrapes and Converts all YT video durations.',
+    description: 'Extrai a duração de múltiplos vídeos e os converte em segundos.',
+    tags: ['youtube'],
     payload: PAYLOAD,
     env_payload: ENV_PAYLOAD
 }
