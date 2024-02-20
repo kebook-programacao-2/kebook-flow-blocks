@@ -34,13 +34,13 @@ const PAYLOAD: Payload = {
             target: "https://orbita.eduzz.com/producer/campaigns"
          },
          {
-            command: "type",
+            command: "keyboard_type",
             enabled: true,
             target: "//*/input[@type='email']",
             value: "%login_email%"
          },
          {
-            command: "type",
+            command: "keyboard_type",
             enabled: true,
             target: "//*/input[@type='password']",
             value: "%login_password%"
