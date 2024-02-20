@@ -302,19 +302,19 @@ const PAYLOAD: Payload = {
       ],
       "create_coupon": [
          {
-            "command": "type",
+            "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@placeholder='Ex.: EDZ-0001']",
             "value": "%name%"
          },
          {
-            "command": "type",
+            "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@maxlength=\"16\"]",
             "value": "%discount%00"
          },
          {
-            "command": "type",
+            "command": "keyboard_type",
             "enabled": true,
             "target": "//*/textarea[@placeholder='Ex.: Cupom promocional']",
             "value": "%description%"
