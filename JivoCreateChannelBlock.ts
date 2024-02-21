@@ -67,23 +67,7 @@ const PAYLOAD: Payload = {
       "jivo_password": "Kbk@1234",
       "jivo_url": "https://bernardofernandes.kebook.com.br/cursos/sabao-caseiro-lucrativo",
       "jivo_color": "#51aafd",
-      "jivo_theme": {
-         "value": "auto",
-         "__options__": [
-            {
-               "label": "Escuro",
-               "value": "dark"
-            },
-            {
-               "label": "Claro",
-               "value": "light"
-            },
-            {
-               "label": "Automático",
-               "value": "auto"
-            }
-         ]
-      }
+      "jivo_theme": "auto"
    },
    "flows": {
       "main_flow": [
@@ -245,11 +229,9 @@ const PAYLOAD: Payload = {
             "target": "//*/div[text()='Instalação']"
          },
          {
-            "command": "scrape_attr",
+            "command": "eval_expression",
             "enabled": true,
-            "target": "//*/textarea",
-            "attr": "value",
-            "response_slot": "jivo_id"
+            "expression": "async_eval(5, 1000, (res) => res({ jivo_id: x('//textarea[@data-qa-id=\"widget-install-code-textarea\"]').value.match(/(?<=widget\\/).*(?=\")/g)[0] }))"
          }
       ],
       "service_quality_flow": [
@@ -347,6 +329,16 @@ const PAYLOAD: Payload = {
             "command": "click",
             "enabled": true,
             "target": "//*[contains(@style,'background-color: rgb(68, 86, 105);')]"
+         },
+         {
+            "command": "click",
+            "enabled": true,
+            "target": "//span[@data-qa-id=\"campaign-steps-menu-1\"]"
+         },
+         {
+            "command": "click",
+            "enabled": true,
+            "target": "//div[@data-qa-id=\"settings-item mobile-colors\"]//div[text()='Esquerda']"
          },
          {
             "command": "click",
