@@ -93,13 +93,13 @@ const PAYLOAD: Payload = {
             "target": "https://app.jivosite.com/settings/channels?lang=pt"
          },
          {
-            "command": "type",
+            "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type='email']",
             "value": "%jivo_email%"
          },
          {
-            "command": "type",
+            "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type='password']",
             "value": "%jivo_password%"
@@ -110,7 +110,7 @@ const PAYLOAD: Payload = {
             "target": "//*/button[text()='Entrar']"
          },
          {
-            "command": "type",
+            "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[contains(@placeholder,'Busque')]",
             "value": "%jivo_url%"
@@ -157,7 +157,7 @@ const PAYLOAD: Payload = {
             "target": "//*/button[text()='Adicionar site']"
          },
          {
-            "command": "type",
+            "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@name='channelNameInput']",
             "value": "%jivo_url%"

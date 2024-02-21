@@ -103,13 +103,13 @@ const PAYLOAD: Payload = {
             "target": "//*/button/span[text()='Adicionar módulos']"
          },
          {
-            "command": "type",
+            "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@id='module_title']",
             "value": "%module_title%"
          },
          {
-            "command": "type",
+            "command": "keyboard_type",
             "enabled": false,
             "target": "//*/input[@id='module_days_locked']",
             "value": "%module_days_locked%"
@@ -154,13 +154,13 @@ const PAYLOAD: Payload = {
             "target": "%$$env.course_home%/%$$res.module_id%/aula"
          },
          {
-            "command": "type",
+            "command": "keyboard_type",
             "enabled": true,
             "target": "//*/label[text()='Titulo']/following-sibling::div/input",
             "value": "%lesson_title%"
          },
          {
-            "command": "type",
+            "command": "keyboard_type",
             "enabled": true,
             "target": "//*/label[text()='Descrição (Nutror Experience)']/following-sibling::div/textarea",
             "value": "%lesson_title%"
@@ -171,7 +171,7 @@ const PAYLOAD: Payload = {
             "target": "//*/h6[text()='Conteúdos']/following-sibling::ul//*[text()='Youtube / Vimeo']"
          },
          {
-            "command": "type",
+            "command": "keyboard_type",
             "enabled": true,
             "target": "//*/label[text()='Url']/following-sibling::div/input",
             "value": "%lesson_link%"
