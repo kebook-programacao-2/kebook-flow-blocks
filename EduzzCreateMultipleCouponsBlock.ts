@@ -66,7 +66,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          {
             "name": "UPSELL25",
             "description": "Coupon 25%",
-            "discount": 25,
+            "discount": "25",
             "year": "2025",
             "day": "01",
             "month": "01"
@@ -74,7 +74,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          {
             "name": "ANONOVO40",
             "description": "Coupon 40%",
-            "discount": 40,
+            "discount": "40",
             "year": "2024",
             "day": "01",
             "month": "02"
@@ -82,7 +82,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          {
             "name": "CARNAVAL40",
             "description": "Coupon 40%",
-            "discount": 40,
+            "discount": "40",
             "year": "2024",
             "day": "01",
             "month": "02"
@@ -90,7 +90,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          {
             "name": "MULHER35",
             "description": "Coupon 35%",
-            "discount": 35,
+            "discount": "35",
             "year": "2024",
             "day": "09",
             "month": "04"
@@ -98,7 +98,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          {
             "name": "PASCOA40",
             "description": "Coupon 40%",
-            "discount": 40,
+            "discount": "40",
             "year": "2024",
             "day": "05",
             "month": "04"
@@ -106,7 +106,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          {
             "name": "MAES40",
             "description": "Coupon 40%",
-            "discount": 40,
+            "discount": "40",
             "year": "2024",
             "day": "01",
             "month": "06"
@@ -114,7 +114,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          {
             "name": "AMOR40",
             "description": "Coupon 40%",
-            "discount": 40,
+            "discount": "40",
             "year": "2024",
             "day": "01",
             "month": "07"
@@ -122,7 +122,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          {
             "name": "INVERNO35",
             "description": "Coupon 35%",
-            "discount": 35,
+            "discount": "35",
             "year": "2024",
             "day": "01",
             "month": "08"
@@ -130,7 +130,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          {
             "name": "PAIS45",
             "description": "Coupon 45%",
-            "discount": 45,
+            "discount": "45",
             "year": "2024",
             "day": "01",
             "month": "09"
@@ -138,7 +138,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          {
             "name": "PRIMAVERA45",
             "description": "Coupon 45%",
-            "discount": 45,
+            "discount": "45",
             "year": "2024",
             "day": "01",
             "month": "10"
@@ -146,7 +146,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          {
             "name": "HALLOWEEN40",
             "description": "Coupon 40%",
-            "discount": 40,
+            "discount": "40",
             "year": "2024",
             "day": "01",
             "month": "11"
@@ -154,7 +154,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          {
             "name": "BLACK55",
             "description": "Coupon 55%",
-            "discount": 55,
+            "discount": "55",
             "year": "2024",
             "day": "01",
             "month": "12"
@@ -162,7 +162,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          {
             "name": "NATAL50",
             "description": "Coupon 50%",
-            "discount": 50,
+            "discount": "50",
             "year": "2024",
             "day": "01",
             "month": "01"
@@ -177,7 +177,7 @@ const PAYLOAD: Payload = {
          {
             "name": "UPSELL25",
             "description": "Coupon 25%",
-            "discount": 25,
+            "discount": "25",
             "year": "2025",
             "day": "01",
             "month": "01"
@@ -185,7 +185,7 @@ const PAYLOAD: Payload = {
          {
             "name": "ANONOVO40",
             "description": "Coupon 40%",
-            "discount": 40,
+            "discount": "40",
             "year": "2024",
             "day": "01",
             "month": "02"
@@ -193,7 +193,7 @@ const PAYLOAD: Payload = {
          {
             "name": "CARNAVAL40",
             "description": "Coupon 40%",
-            "discount": 40,
+            "discount": "40",
             "year": "2024",
             "day": "01",
             "month": "02"
@@ -201,7 +201,7 @@ const PAYLOAD: Payload = {
          {
             "name": "MULHER35",
             "description": "Coupon 35%",
-            "discount": 35,
+            "discount": "35",
             "year": "2024",
             "day": "09",
             "month": "04"
@@ -209,7 +209,7 @@ const PAYLOAD: Payload = {
          {
             "name": "PASCOA40",
             "description": "Coupon 40%",
-            "discount": 40,
+            "discount": "40",
             "year": "2024",
             "day": "05",
             "month": "04"
@@ -217,7 +217,7 @@ const PAYLOAD: Payload = {
          {
             "name": "MAES40",
             "description": "Coupon 40%",
-            "discount": 40,
+            "discount": "40",
             "year": "2024",
             "day": "01",
             "month": "06"
@@ -225,7 +225,7 @@ const PAYLOAD: Payload = {
          {
             "name": "AMOR40",
             "description": "Coupon 40%",
-            "discount": 40,
+            "discount": "40",
             "year": "2024",
             "day": "01",
             "month": "07"
@@ -233,7 +233,7 @@ const PAYLOAD: Payload = {
          {
             "name": "INVERNO35",
             "description": "Coupon 35%",
-            "discount": 35,
+            "discount": "35",
             "year": "2024",
             "day": "01",
             "month": "08"
@@ -241,7 +241,7 @@ const PAYLOAD: Payload = {
          {
             "name": "PAIS45",
             "description": "Coupon 45%",
-            "discount": 45,
+            "discount": "45",
             "year": "2024",
             "day": "01",
             "month": "09"
@@ -249,7 +249,7 @@ const PAYLOAD: Payload = {
          {
             "name": "PRIMAVERA45",
             "description": "Coupon 45%",
-            "discount": 45,
+            "discount": "45",
             "year": "2024",
             "day": "01",
             "month": "10"
@@ -257,7 +257,7 @@ const PAYLOAD: Payload = {
          {
             "name": "HALLOWEEN40",
             "description": "Coupon 40%",
-            "discount": 40,
+            "discount": "40",
             "year": "2024",
             "day": "01",
             "month": "11"
@@ -265,7 +265,7 @@ const PAYLOAD: Payload = {
          {
             "name": "BLACK55",
             "description": "Coupon 55%",
-            "discount": 55,
+            "discount": "55",
             "year": "2024",
             "day": "01",
             "month": "12"
@@ -273,7 +273,7 @@ const PAYLOAD: Payload = {
          {
             "name": "NATAL50",
             "description": "Coupon 50%",
-            "discount": 50,
+            "discount": "50",
             "year": "2024",
             "day": "01",
             "month": "01"
