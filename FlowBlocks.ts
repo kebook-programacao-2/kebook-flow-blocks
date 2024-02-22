@@ -1,6 +1,7 @@
 import { EduzzLoginBlock } from "./EduzzLoginBlock";
 import { EduzzCreateMultipleCouponsBlock } from "./EduzzCreateMultipleCouponsBlock";
-import { MyNutrorCreateModulesAndLessonsBlock } from "./MyNutrorCreateModulesAndLessonsBlock";
+import { NutrorYTVimeoCreateModulesAndLessonsBlock } from "./NutrorYTVimeoCreateModulesAndLessonsBlock";
+import { NutrorSafeVideoCreateModulesAndLessonsBlock } from "./NutrorSafeVideoCreateModulesAndLessonsBlock";
 import { GoogleAnalyticsCreatePropertyBlock } from "./GoogleAnalyticsCreatePropertyBlock";
 import { JivoCreateChannelBlock } from "./JivoCreateChannelBlock";
 import { YTEvalDurationScraperConverterBlock } from "./YTEvalDurationScraperConverterBlock";
@@ -12,7 +13,8 @@ import { JivoSearchID } from "./JivoSearchID";
 export const FlowBlocks = [
    EduzzLoginBlock,
    // GoogleAnalyticsCreatePropertyBlock,
-   MyNutrorCreateModulesAndLessonsBlock,
+   NutrorYTVimeoCreateModulesAndLessonsBlock,
+   NutrorSafeVideoCreateModulesAndLessonsBlock,
    EduzzCreateMultipleCouponsBlock,
    JivoCreateChannelBlock,
    JivoSearchID,

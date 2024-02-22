@@ -206,10 +206,10 @@ const PAYLOAD: Payload = {
    }
 }
 
-export const MyNutrorCreateModulesAndLessonsBlock = {
-   title: 'MyNutror - Criar Módulos e Aulas',
+export const NutrorYTVimeoCreateModulesAndLessonsBlock = {
+   title: 'Nutror (YouTube e Vimeo) - Criar Módulos e Aulas',
    block_id: '4df6ee4c-f5be-4a65-ba86-3944e670ca2b',
-   description: 'Cria módulos e aulas em um determinado curso. Necessita login.',
+   description: 'Cria módulos e aulas em um determinado curso. Necessita login. Aceita somente aulas do YouTube ou do Vimeo.',
    tags: ['eduzz'],
    payload: PAYLOAD,
    env_payload: ENV_PAYLOAD
