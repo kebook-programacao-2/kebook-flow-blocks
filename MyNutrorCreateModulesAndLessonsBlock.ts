@@ -80,6 +80,11 @@ const PAYLOAD: Payload = {
    "flows": {
       "main_flow": [
          {
+            "command": "eval_expression",
+            "enabled": true,
+            "expression": "env({ course_home: '%$$env.course_home%'.match(/.*modulos/g)[0] })"
+         },
+         {
             "command": "run_flow_for_each",
             "enabled": true,
             "flow": "create_module",
@@ -162,13 +167,13 @@ const PAYLOAD: Payload = {
          {
             "command": "keyboard_type",
             "enabled": true,
-            "target": "//*/label[text()='Descrição (Nutror Experience)']/following-sibling::div/textarea",
+            "target": "//textarea",
             "value": "%lesson_title%"
          },
          {
             "command": "click",
             "enabled": true,
-            "target": "//*/h6[text()='Conteúdos']/following-sibling::ul//*[text()='Youtube / Vimeo']"
+            "target": "//ul//*[text()='Youtube / Vimeo']"
          },
          {
             "command": "keyboard_type",
