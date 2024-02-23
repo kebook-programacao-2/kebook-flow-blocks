@@ -52,6 +52,11 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
+            "expression": "async_eval(5, 1000, () => {    if (x('//div[@class=\"ytp-ad-text\"]') && x(\"//div[contains(@class,  'ytp-ad-skip-button-text')]\")) {       x(\"//div[contains(@class,  'ytp-ad-skip-button-text')]\").click();    } })"
+         },
+         {
+            "command": "eval_expression",
+            "enabled": true,
             "expression": "(() => {    let [sec, min, hour] = x('//*/span[@class=\"ytp-time-duration\"]').innerText.split(':').reverse();    let title = x('//*/h1[@class=\"style-scope ytd-watch-metadata\"]').innerText;    return { [title]: ((parseInt(hour) || 0) * 3600) + ((parseInt(min) || 0) * 60) + parseInt(sec) }; })()"
          }
       ]

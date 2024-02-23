@@ -16,7 +16,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          "label": "Senha de login",
          "tooltip": "Senha para login no Jivo",
          "placeholder": "********",
-         "type": "text"
+         "type": "password"
       }
    },
    "jivo_url": {
