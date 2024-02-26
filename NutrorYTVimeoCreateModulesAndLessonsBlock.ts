@@ -35,6 +35,11 @@ const ENV_PAYLOAD: EnvPayloadModel = {
                         placeholder: 'Aula 01 - Como se comportar em público',
                         type: 'text'
                      },
+                     lesson_description: {
+                        label: 'Descrição da aula',
+                        placeholder: 'Nesta aula...',
+                        type: 'text'
+                     },
                      lesson_link: {
                         label: 'Link da aula',
                         placeholder: 'https://www.youtube.com/watch?v=_hqMALWpHD0',
@@ -58,10 +63,12 @@ const PAYLOAD: Payload = {
             "module_lessons": [
                {
                   "lesson_title": "Aula 01",
+                  "lesson_description": "Nesta aula...",
                   "lesson_link": "https://www.youtube.com/watch?v=05Xl9ze-5-s"
                },
                {
                   "lesson_title": "Aula 02",
+                  "lesson_description": "Nesta aula...",
                   "lesson_link": "https://www.youtube.com/watch?v=LleeqCYYv80"
                }
             ]
@@ -71,6 +78,7 @@ const PAYLOAD: Payload = {
             "module_lessons": [
                {
                   "lesson_title": "Aula 01",
+                  "lesson_description": "",
                   "lesson_link": "https://www.youtube.com/watch?v=4ps-bDRZ6II"
                }
             ]
@@ -165,10 +173,15 @@ const PAYLOAD: Payload = {
             "value": "%lesson_title%"
          },
          {
+            "command": "eval_expression",
+            "enabled": true,
+            "expression": "env({ lesson_description: '%lesson_description%' || '%lesson_title%' })"
+         },
+         {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//textarea",
-            "value": "%lesson_title%"
+            "value": "%lesson_description%"
          },
          {
             "command": "click",

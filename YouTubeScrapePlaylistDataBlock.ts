@@ -4,9 +4,8 @@ const ENV_PAYLOAD: EnvPayloadModel = {
    "playlist_url": {
       "value": "",
       "schema": {
-         "label": "Playlist_url",
-         "tooltip": "Playlist_url tooltip",
-         "placeholder": "Playlist_url placeholder",
+         "label": "URL da Playlist",
+         "placeholder": "https://www.youtube.com/playlist?list=PLKwNxYxOKPJTlBHtyFkV4Z9ZqJaWtqXGO",
          "type": "text"
       }
    }

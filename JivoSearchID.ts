@@ -105,9 +105,9 @@ const PAYLOAD: Payload = {
 };
 
 export const JivoSearchID = {
-    title: 'Jivo - Search ID',
+    title: 'Jivo - Buscar código',
     block_id: '5647c62b-2201-41ea-93d9-39d64ec490be',
-    description: 'Searches for an ID',
+    description: 'Busca pelo código de um JivoChat.',
     payload: PAYLOAD,
     env_payload: ENV_PAYLOAD
 }

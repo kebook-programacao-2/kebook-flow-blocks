@@ -4,11 +4,12 @@ import { NutrorYTVimeoCreateModulesAndLessonsBlock } from "./NutrorYTVimeoCreate
 import { NutrorSafeVideoCreateModulesAndLessonsBlock } from "./NutrorSafeVideoCreateModulesAndLessonsBlock";
 import { GoogleAnalyticsCreatePropertyBlock } from "./GoogleAnalyticsCreatePropertyBlock";
 import { JivoCreateChannelBlock } from "./JivoCreateChannelBlock";
-import { YTEvalDurationScraperConverterBlock } from "./YTEvalDurationScraperConverterBlock";
+import { YouTubeEvalDurationScraperConverterBlock } from "./YouTubeEvalDurationScraperConverterBlock";
 import { KiwifyLoginBlock } from "./KiwifyLoginBlock";
 import { KiwifyCreateCampaignsBlock } from "./KiwifyCreateCampaignsBlock";
 import { YouTubeScrapePlaylistDataBlock } from "./YouTubeScrapePlaylistDataBlock";
 import { JivoSearchID } from "./JivoSearchID";
+import { KiwifyYouTubeCreateLessonsBlock } from "./KiwifyYouTubeCreateLessonsBlock";
 
 export const FlowBlocks = [
    EduzzLoginBlock,
@@ -20,6 +21,7 @@ export const FlowBlocks = [
    JivoSearchID,
    KiwifyLoginBlock,
    KiwifyCreateCampaignsBlock,
-   YTEvalDurationScraperConverterBlock,
+   KiwifyYouTubeCreateLessonsBlock,
+   YouTubeEvalDurationScraperConverterBlock,
    YouTubeScrapePlaylistDataBlock
 ];
