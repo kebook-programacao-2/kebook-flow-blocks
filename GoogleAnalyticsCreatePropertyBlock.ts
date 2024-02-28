@@ -157,6 +157,15 @@ const PAYLOAD: Payload = {
             "target": "https://analytics.google.com/analytics/web"
          },
          {
+            "command": "eval_expression",
+            "enabled": true,
+            "expression": "goto(window.location.href.replace('glif', 'mn') + '&hl=en-US')"
+         },
+         {
+            "command": "wait_for_navigation",
+            "enabled": true
+         },
+         {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type='email']",
@@ -319,7 +328,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@debug-id=\"search-input\"]",
-            "value": "%category.value%"
+            "value": "%category%"
          },
          {
             "command": "wait_seconds",
@@ -395,26 +404,12 @@ const PAYLOAD: Payload = {
          {
             "command": "wait_seconds",
             "enabled": true,
-            "time": "10000"
+            "time": "6000"
          },
-         {
-            "command": "click",
-            "enabled": true,
-            "target": "//*/i[@aria-label=\"Fechar tela\"]"
-         },
-         {
-            "command": "scrape_attr",
-            "enabled": true,
-            "target": "//*/div[@guidedhelpid=\"measurement-id\"]/span",
-            "attr": "innerText",
-            "response_slot": "metrics_id"
-         }
-      ],
-      "gtag-eval": [
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "console.log('GTAG', x('//*/div[@data-ng-if=\"ctrl.snippet\"]').innerText.match(/G-[A-z,0-9]*/gi))"
+            "expression": "env({ gtag: x('//div[@guidedhelpid=\"measurement-id\"]')?.innerText?.match(/.*(?=\\n)/g)[0] })"
          }
       ]
    },

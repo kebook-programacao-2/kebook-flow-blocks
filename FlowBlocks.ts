@@ -10,10 +10,12 @@ import { KiwifyCreateCampaignsBlock } from "./KiwifyCreateCampaignsBlock";
 import { YouTubeScrapePlaylistDataBlock } from "./YouTubeScrapePlaylistDataBlock";
 import { JivoSearchID } from "./JivoSearchID";
 import { KiwifyYouTubeCreateLessonsBlock } from "./KiwifyYouTubeCreateLessonsBlock";
+import { KiwifyGetDurationsBlock } from "./KiwifyGetDurationsBlock";
+import { TablerIconsScraperBlock } from "./TablerIconsScraperBlock";
 
 export const FlowBlocks = [
    EduzzLoginBlock,
-   // GoogleAnalyticsCreatePropertyBlock,
+   GoogleAnalyticsCreatePropertyBlock,
    NutrorYTVimeoCreateModulesAndLessonsBlock,
    NutrorSafeVideoCreateModulesAndLessonsBlock,
    EduzzCreateMultipleCouponsBlock,
@@ -22,6 +24,8 @@ export const FlowBlocks = [
    KiwifyLoginBlock,
    KiwifyCreateCampaignsBlock,
    KiwifyYouTubeCreateLessonsBlock,
+   KiwifyGetDurationsBlock,
    YouTubeEvalDurationScraperConverterBlock,
+   TablerIconsScraperBlock,
    YouTubeScrapePlaylistDataBlock
 ];
