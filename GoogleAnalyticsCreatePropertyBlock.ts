@@ -108,46 +108,6 @@ const PAYLOAD: Payload = {
             "command": "run_flow",
             "enabled": true,
             "flow": "login"
-         },
-         {
-            "command": "run_flow",
-            "enabled": true,
-            "flow": "navigate_admin"
-         },
-         {
-            "command": "run_flow",
-            "enabled": true,
-            "flow": "create_property"
-         },
-         {
-            "command": "wait_seconds",
-            "enabled": true,
-            "time": "4000"
-         },
-         {
-            "command": "run_flow",
-            "enabled": true,
-            "flow": "commercial_details"
-         },
-         {
-            "command": "wait_seconds",
-            "enabled": true,
-            "time": "4000"
-         },
-         {
-            "command": "run_flow",
-            "enabled": true,
-            "flow": "business_objectives"
-         },
-         {
-            "command": "wait_seconds",
-            "enabled": true,
-            "time": "4000"
-         },
-         {
-            "command": "run_flow",
-            "enabled": true,
-            "flow": "data_collection"
          }
       ],
       "login": [
@@ -195,6 +155,62 @@ const PAYLOAD: Payload = {
          {
             "command": "wait_for_navigation",
             "enabled": true
+         },
+         {
+            "command": "branch_eval",
+            "enabled": true,
+            "expression": "async_eval(6, 1000, res => {const verifyBtn = x('//*[contains(text(), \"Use another phone or\")]');if (!verifyBtn) {res('Verificação OK!');} else {verifyBtn.click();return { error: 'Verifique sua conta do Google no link https://g.co/verifyaccount e depois execute o bloco novamente.' }}})",
+            "success_flow": "auth_pass",
+            "error_flow": "auth_needed"
+         }
+      ],
+      "auth_needed": [
+         {
+            "command": "eval_expression",
+            "enabled": true,
+            "expression": "env({ erro: 'Verifique sua conta do Google no link https://g.co/verifyaccount e depois execute o bloco novamente.' })"
+         }
+      ],
+      "auth_pass": [
+         {
+            "command": "run_flow",
+            "enabled": true,
+            "flow": "navigate_admin"
+         },
+         {
+            "command": "run_flow",
+            "enabled": true,
+            "flow": "create_property"
+         },
+         {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "4000"
+         },
+         {
+            "command": "run_flow",
+            "enabled": true,
+            "flow": "commercial_details"
+         },
+         {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "4000"
+         },
+         {
+            "command": "run_flow",
+            "enabled": true,
+            "flow": "business_objectives"
+         },
+         {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "4000"
+         },
+         {
+            "command": "run_flow",
+            "enabled": true,
+            "flow": "data_collection"
          }
       ],
       "create_property": [
