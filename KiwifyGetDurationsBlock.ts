@@ -119,6 +119,7 @@ export const KiwifyGetDurationsBlock = {
     title: 'Kiwify - Extrair durações',
     block_id: '45630a80-3fc9-40a4-af4b-9a127a499cd3',
     description: 'Extrai as durações dos vídeos na visualização das aulas. Requer login.',
+    dependencies: ['258e3800-5d46-455f-b20a-2ebb6743cedb'],
     tags: ['kiwify'],
     payload: PAYLOAD,
     env_payload: ENV_PAYLOAD

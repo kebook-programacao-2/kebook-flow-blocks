@@ -149,6 +149,7 @@ export const KiwifyCreateCampaignsBlock = {
     title: 'Kiwify - Criar campanhas',
     block_id: 'bd4612ae-ca21-4f8d-909a-a737d0dd92af',
     description: 'Cria campanhas na Kiwify.',
+    dependencies: ['258e3800-5d46-455f-b20a-2ebb6743cedb'],
     tags: ['kiwify'],
     payload: PAYLOAD,
     env_payload: ENV_PAYLOAD

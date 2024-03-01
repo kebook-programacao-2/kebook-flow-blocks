@@ -440,6 +440,7 @@ export const EduzzCreateMultipleCouponsBlock = {
    title: 'Eduzz - Criar múltiplos cupons',
    block_id: '4df6ee4c-f5be-4a65-ba86-3944e670ca2b',
    description: 'Cria cupons na Eduzz. Necessita login.',
+   dependencies: ['5817351e-5c56-4059-a620-759145d938a5'],
    tags: ['eduzz'],
    payload:PAYLOAD,
    env_payload: ENV_PAYLOAD

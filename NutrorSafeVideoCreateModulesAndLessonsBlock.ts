@@ -236,6 +236,7 @@ export const NutrorSafeVideoCreateModulesAndLessonsBlock = {
     title: 'Nutror (SafeVideo) - Criar Módulos e Aulas',
     block_id: 'a21f1fa1-c78d-4d88-9213-dbbd56054739',
     description: 'Cria módulos e aulas em um determinado curso. Necessita login. Aceita somente aulas do SafeVideo.',
+    dependencies: ['5817351e-5c56-4059-a620-759145d938a5'],
     tags: ['eduzz'],
     payload: PAYLOAD,
     env_payload: ENV_PAYLOAD

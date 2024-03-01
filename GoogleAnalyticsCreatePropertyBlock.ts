@@ -1,29 +1,11 @@
-import type { EnvPayloadModel, Payload } from "$lib/types";
+import type { EnvPayloadModel, Payload, BlockProps } from "$lib/types";
 
 const ENV_PAYLOAD: EnvPayloadModel = {
-   "email": {
-      "value": "",
-      "schema": {
-         "label": "E-mail",
-         "tooltip": "E-mail para login no GA",
-         "placeholder": "devdasilva@email.com",
-         "type": "text"
-      }
-   },
-   "password": {
-      "value": "",
-      "schema": {
-         "label": "Senha",
-         "tooltip": "Senha para login no GA",
-         "placeholder": "*********",
-         "type": "text"
-      }
-   },
    "prop_name": {
       "value": "",
       "schema": {
          "label": "Nome da propriedade",
-         "tooltip": "O nome da propriedade para identificação dentro da plataforma (por padrão é a URL do produto)",
+         "tooltip": "O nome da propriedade (por padrão é a URL do produto, sem o HTTPS)",
          "placeholder": "devdasilva.kebook.com.br/curso/guia-do-kronus",
          "type": "text"
       }
@@ -68,9 +50,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
 
 const PAYLOAD: Payload = {
    "env": {
-      "email": "kebook.programacao.2@gmail.com",
-      "password": "4mYR51pz!",
-      "prop_name": "devdasilva.kebook.com.br/curso/guia-do-kronus",  
+      "prop_name": "heitorschleder.kebook.com.br/curso/guia-pratico-de-como-utilizar-o-kronus/dev-test-001",  
       "category": {
          "value": "Empregos e educação",
          "__options__": [
@@ -104,74 +84,6 @@ const PAYLOAD: Payload = {
    },
    "flows": {
       "main_flow": [
-         {
-            "command": "run_flow",
-            "enabled": true,
-            "flow": "login"
-         }
-      ],
-      "login": [
-         {
-            "command": "goto",
-            "enabled": true,
-            "target": "https://analytics.google.com/analytics/web"
-         },
-         {
-            "command": "eval_expression",
-            "enabled": true,
-            "expression": "goto(window.location.href.replace('glif', 'mn') + '&hl=en-US')"
-         },
-         {
-            "command": "wait_for_navigation",
-            "enabled": true
-         },
-         {
-            "command": "keyboard_type",
-            "enabled": true,
-            "target": "//*/input[@type='email']",
-            "value": "%email%"
-         },
-         {
-            "command": "click",
-            "enabled": true,
-            "target": "//*/div//*[text()='Next']"
-         },
-         {
-            "command": "wait_seconds",
-            "enabled": true,
-            "time": "4000"
-         },
-         {
-            "command": "keyboard_type",
-            "enabled": true,
-            "target": "//*/input[@type='password']",
-            "value": "%password%"
-         },
-         {
-            "command": "click",
-            "enabled": true,
-            "target": "//*/div//*[text()='Next']"
-         },
-         {
-            "command": "wait_for_navigation",
-            "enabled": true
-         },
-         {
-            "command": "branch_eval",
-            "enabled": true,
-            "expression": "async_eval(6, 1000, res => {const verifyBtn = x('//*[contains(text(), \"Use another phone or\")]');if (!verifyBtn) {res('Verificação OK!');} else {verifyBtn.click();return { error: 'Verifique sua conta do Google no link https://g.co/verifyaccount e depois execute o bloco novamente.' }}})",
-            "success_flow": "auth_pass",
-            "error_flow": "auth_needed"
-         }
-      ],
-      "auth_needed": [
-         {
-            "command": "eval_expression",
-            "enabled": true,
-            "expression": "env({ erro: 'Verifique sua conta do Google no link https://g.co/verifyaccount e depois execute o bloco novamente.' })"
-         }
-      ],
-      "auth_pass": [
          {
             "command": "run_flow",
             "enabled": true,
@@ -437,10 +349,12 @@ const PAYLOAD: Payload = {
    }
 };
 
-export const GoogleAnalyticsCreatePropertyBlock = {
+export const GoogleAnalyticsCreatePropertyBlock: BlockProps = {
     title: 'Google Analytics - Criar propriedade',
     block_id: 'ccf422e6-21dc-42e9-93d8-1b4354f48180',
-    description: 'Cria uma propriedade do Google Analytics.',
+    description: 'Cria uma propriedade do Google Analytics. Requer login.',
+    dependencies: ['a909454b-187e-4296-95ec-1effbe42d7af'],
+    tags: ["google"],
     payload: PAYLOAD,
     env_payload: ENV_PAYLOAD
 }

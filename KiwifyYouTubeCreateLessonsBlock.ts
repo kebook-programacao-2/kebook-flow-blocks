@@ -190,6 +190,7 @@ export const KiwifyYouTubeCreateLessonsBlock = {
     title: 'Kiwify (YouTube) - Criar Módulos e Aulas',
     block_id: '5e6cb472-a201-4c03-9420-5dbb8b62a625',
     description: 'Cria módulos e aulas hospedadas no YouTube. Requer login.',
+    dependencies: ['258e3800-5d46-455f-b20a-2ebb6743cedb'],
     tags: ['kiwify'],
     payload: PAYLOAD,
     env_payload: ENV_PAYLOAD
