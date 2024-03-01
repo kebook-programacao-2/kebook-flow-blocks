@@ -12,6 +12,7 @@ import { JivoSearchID } from "./JivoSearchID";
 import { KiwifyYouTubeCreateLessonsBlock } from "./KiwifyYouTubeCreateLessonsBlock";
 import { KiwifyGetDurationsBlock } from "./KiwifyGetDurationsBlock";
 import { TablerIconsScraperBlock } from "./TablerIconsScraperBlock";
+import { KronusRemoveSectionBlock } from "./KronusRemoveSectionBlock";
 
 export const FlowBlocks = [
    EduzzLoginBlock,
@@ -27,5 +28,6 @@ export const FlowBlocks = [
    KiwifyGetDurationsBlock,
    YouTubeEvalDurationScraperConverterBlock,
    TablerIconsScraperBlock,
+   KronusRemoveSectionBlock,
    YouTubeScrapePlaylistDataBlock
 ];
