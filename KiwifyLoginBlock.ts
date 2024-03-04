@@ -37,6 +37,11 @@ const PAYLOAD: Payload = {
          },
          {
             "command": "run_flow",
+            "enabled": true,
+            "flow": "select_user"
+         },
+         {
+            "command": "run_flow",
             "enabled": false,
             "flow": "get_2fa_code"
          }
@@ -70,9 +75,24 @@ const PAYLOAD: Payload = {
             "target": "//*/button[contains(text(), 'Entrar')]"
          },
          {
-            "command": "wait_seconds",
+            "command": "wait_for_navigation",
+            "enabled": true
+         }
+      ],
+      "select_user": [
+         {
+            "command": "click",
             "enabled": true,
-            "time": "5000"
+            "target": "//*/div[contains(@class, 'hidden sticky')]//a[contains(@href, '/?team=')]//*[contains(text(), '%expert_username%')]"
+         },
+         {
+            "command": "wait_for_navigation",
+            "enabled": true
+         },
+         {
+            "command": "screenshot",
+            "enabled": false,
+            "filename": "kiwify.png"
          }
       ],
       "get_2fa_code": [
@@ -141,11 +161,6 @@ const PAYLOAD: Payload = {
          {
             "command": "wait_for_navigation",
             "enabled": true
-         },
-         {
-            "command": "click",
-            "enabled": true,
-            "target": "//*/div[contains(@class, 'hidden sticky')]//a[contains(@href, '/?team=')]//*[contains(text(), '%expert_username%')]"
          }
       ],
       "no_code_found": [

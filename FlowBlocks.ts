@@ -14,16 +14,20 @@ import { KiwifyGetDurationsBlock } from "./KiwifyGetDurationsBlock";
 import { TablerIconsScraperBlock } from "./TablerIconsScraperBlock";
 import { KronusRemoveSectionBlock } from "./KronusRemoveSectionBlock";
 import { GoogleLoginBlock } from "./GoogleLoginBlock";
+import { KiwifyCreateLessonsBlock } from "./KiwifyCreateLessonsBlock";
+import { KiwifyMaterialDownloadCreateLessonsBlock } from "./KiwifyMaterialDownloadCreateLessonsBlock";
 
 export const FlowBlocks = [
    GoogleLoginBlock,
    GoogleAnalyticsCreatePropertyBlock,
    EduzzLoginBlock,
+   EduzzCreateMultipleCouponsBlock,
    NutrorYTVimeoCreateModulesAndLessonsBlock,
    NutrorSafeVideoCreateModulesAndLessonsBlock,
-   EduzzCreateMultipleCouponsBlock,
    KiwifyLoginBlock,
    KiwifyCreateCampaignsBlock,
+   KiwifyCreateLessonsBlock,
+   KiwifyMaterialDownloadCreateLessonsBlock,
    KiwifyYouTubeCreateLessonsBlock,
    KiwifyGetDurationsBlock,
    JivoCreateChannelBlock,
