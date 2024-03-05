@@ -16,10 +16,14 @@ import { KronusRemoveSectionBlock } from "./KronusRemoveSectionBlock";
 import { GoogleLoginBlock } from "./GoogleLoginBlock";
 import { KiwifyCreateLessonsBlock } from "./KiwifyCreateLessonsBlock";
 import { KiwifyMaterialDownloadCreateLessonsBlock } from "./KiwifyMaterialDownloadCreateLessonsBlock";
+import { GoogleAnalyticsGetGTagBlock } from "./GoogleAnalyticsGetGTagBlock";
+import { GoogleAnalyticsCreateGTMTagBlock } from "./GoogleAnalyticsCreateGTMTagBlock";
 
 export const FlowBlocks = [
    GoogleLoginBlock,
    GoogleAnalyticsCreatePropertyBlock,
+   GoogleAnalyticsGetGTagBlock,
+   GoogleAnalyticsCreateGTMTagBlock,
    EduzzLoginBlock,
    EduzzCreateMultipleCouponsBlock,
    NutrorYTVimeoCreateModulesAndLessonsBlock,
