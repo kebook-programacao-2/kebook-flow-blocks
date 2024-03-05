@@ -157,8 +157,9 @@ const PAYLOAD: Payload = {
             "target": "//a[contains(@href, '/tags')]"
          },
          {
-            "command": "wait_for_navigation",
-            "enabled": false
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "5000"
          },
          {
             "command": "click",
