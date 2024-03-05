@@ -1,12 +1,12 @@
 import type { EnvPayloadModel, Payload, BlockProps } from "$lib/types";
 
 const ENV_PAYLOAD: EnvPayloadModel = {
-   "prop_name": {
+   "account_name": {
       "value": "",
       "schema": {
-         "label": "Nome da propriedade",
-         "tooltip": "O nome da propriedade (por padrão é a URL do produto, sem o HTTPS)",
-         "placeholder": "devdasilva.kebook.com.br/curso/guia-do-kronus",
+         "label": "Nome da conta do Google Analytics",
+         "tooltip": "O nome da conta (geralmente a URL do produto sem o protocolo HTTPS)",
+         "placeholder": "heitorschleder.kebook.com.br/curso/guia-pratico-de-como-utilizar-o-kronus",
          "type": "text"
       }
    },
@@ -50,7 +50,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
 
 const PAYLOAD: Payload = {
    "env": {
-      "prop_name": "heitorschleder.kebook.com.br/curso/guia-pratico-de-como-utilizar-o-kronus/dev-test-001",  
+      "account_name": "heitorschleder.kebook.com.br/curso/guia-pratico-de-como-utilizar-o-kronus/dev-test-001",  
       "category": {
          "value": "Empregos e educação",
          "__options__": [
@@ -130,7 +130,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@id='name']",
-            "value": "%prop_name%"
+            "value": "%account_name%"
          },
          {
             "command": "click",
@@ -316,13 +316,13 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@debug-id=\"website-url-input\"]",
-            "value": "%prop_name%"
+            "value": "%account_name%"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@debug-id=\"stream-name-input\"]",
-            "value": "https://%prop_name%"
+            "value": "https://%account_name%"
          },
          {
             "command": "click",

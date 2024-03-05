@@ -5,7 +5,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
       "value": "",
       "schema": {
          "label": "GTAG",
-         "tooltip": "Tag do Google Analytics",
+         "tooltip": "Tag do Google Analytics. Deixar em branco em caso de extração ou criação da Tag.",
          "placeholder": "G-123456",
          "type": "text"
       }

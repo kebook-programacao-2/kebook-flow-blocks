@@ -3,14 +3,70 @@ import type { EnvPayloadModel, Payload } from "$lib/types";
 
 const ENV_PAYLOAD: EnvPayloadModel = {
    "expert_username": {
-		"schema": {
-			"label": "Nome de usuário",
-			"tooltip": "Nome do usuário do expert, no canto superior esquerdo",
-			"placeholder": "Dev da Silva",
-			"type": "text"
-		},
-		"value": ""
-	}
+      "value": "",
+      "schema": {
+         "label": "Nome de usuário",
+         "tooltip": "Nome do usuário do expert",
+         "placeholder": "Dev da Silva",
+         "fields_type": "select",
+         "options": [
+            "Dev da Silva",
+            "Vinicio Junio de Oliveira",
+            "Fernanda Aparecida Massa Tex",
+            "NATHALIE LOCKLEY",
+            "Aline silveira Rosa",
+            "andressa pinheiro freire",
+            "CARLOS WILSON DE SOUZA PEREIRA 72930420600",
+            "WLADIMIR HENRIQUE BUOSI",
+            "LUCAS DE OLIVEIRA SANTOS 12",
+            "poliana dos santos bonze",
+            // "Kebook LTDA",
+            "42181433000130",
+            {
+               "label": "Lucimar Beatriz",
+               "value": "LUCIMAR BEATRIZ DOS SANTOS 02075732043"
+            },
+            "leandro santo marques",
+            "Moadir mariano da Silva",
+            "Thaís aparecida Marques da Silva",
+            "Gustavo Vinicius Pina Martins",
+            {
+               "label": "Amanda Loren",
+               "value": "AMANDA LOREN DE OLIVEIRA COLPAS 30187981809"
+            },
+            "Marcelo Fenoll Ramal",
+            "CLEVERSON MARTINS TEIXEIRA",
+            "Thiago Gomes Vegette",
+            "Geane de Lima Santana Carvalho",
+            "wagner luiz do nascimento silva",
+            "Gorete Aparecida Souza Perin",
+            "Maria Daniely Oliveira da Silva",
+            "neldson alves batista",
+            "João Vitor Barbosa de Carlos",
+            "canaltopreceitas@gmail.com",
+            "Maikelane Lopes da Cruz silva",
+            "Bernardo de Oliveira Fernandes",
+            "SABEDORIA DA MULHER EMPREENDIMENTOS ONLINE",
+            "Amanda Lima da Silva",
+            "José Roberto da Conceiçao",
+            "Sandra Maria Rodrigues",
+            "R. GALVAO NASCIMENTO LTDA",
+            "Mario Hermes de Jesus Sobral",
+            "HENRIQUE GUIRRA BONFIM",
+            "Renato Goetten",
+            {
+               "label": "Oton Safraide",
+               "value": "S O ESTUDIO LTDA"
+            },
+            "RODRIGO REIS DE GODOY 38273367835",
+            "Jaize Barreto da Silveira",
+            "Danielle Celi Vitor de Barros",
+            "Rute Lacerda Tarelho",
+            "Betel BRS LTDA",
+            "Luis Fernando de Moraes"
+         ]
+      }
+   }
 };
 
 const PAYLOAD: Payload = {
