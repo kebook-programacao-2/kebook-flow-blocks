@@ -18,6 +18,7 @@ import { KiwifyCreateLessonsBlock } from "./KiwifyCreateLessonsBlock";
 import { KiwifyMaterialDownloadCreateLessonsBlock } from "./KiwifyMaterialDownloadCreateLessonsBlock";
 import { GoogleAnalyticsGetGTagBlock } from "./GoogleAnalyticsGetGTagBlock";
 import { GoogleAnalyticsCreateGTMTagBlock } from "./GoogleAnalyticsCreateGTMTagBlock";
+import { OpenAiTestBlock } from "./OpenAiTestBlock";
 
 export const FlowBlocks = [
    GoogleLoginBlock,
@@ -39,5 +40,6 @@ export const FlowBlocks = [
    YouTubeEvalDurationScraperConverterBlock,
    YouTubeScrapePlaylistDataBlock,
    TablerIconsScraperBlock,
-   KronusRemoveSectionBlock
+   KronusRemoveSectionBlock,
+   OpenAiTestBlock
 ];

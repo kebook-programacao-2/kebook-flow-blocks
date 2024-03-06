@@ -151,6 +151,11 @@ const PAYLOAD: Payload = {
             "value": "%lesson_filename%"
          },
          {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "5000"
+         },
+         {
             "command": "click",
             "enabled": true,
             "target": "((//table)[3]//tr)[2]"

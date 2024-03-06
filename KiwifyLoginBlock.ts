@@ -10,7 +10,10 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          "placeholder": "Dev da Silva",
          "fields_type": "select",
          "options": [
-            "Dev da Silva",
+            {
+               "label": "🍆 Dev da Silva",
+               "value": "Dev da Silva"
+            },
             "Vinicio Junio de Oliveira",
             "Fernanda Aparecida Massa Tex",
             "NATHALIE LOCKLEY",
