@@ -134,6 +134,11 @@ const PAYLOAD: Payload = {
             "target": "//*/button[contains(text(), 'Entrar')]"
          },
          {
+            "command": "eval_expression",
+            "enabled": true,
+            "expression": "env({ recaptcha_error: x(\"//*/[contains(text(), 'Recaptcha Error')]\")?.innerText || 'None found' })"
+         },
+         {
             "command": "wait_for_navigation",
             "enabled": true
          }
