@@ -45,7 +45,7 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "_fb_vars.videos_count -= 100"
+            "expression": "_$fb_vars.videos_count -= 100"
          },
          {
             "command": "run_flow",
@@ -57,7 +57,7 @@ const PAYLOAD: Payload = {
          {
             "command": "branch_eval",
             "enabled": true,
-            "expression": "_fb_vars.videos_count > 99",
+            "expression": "_$fb_vars.videos_count > 99",
             "success_flow": "press_end",
             "error_flow": "scrape"
          }
