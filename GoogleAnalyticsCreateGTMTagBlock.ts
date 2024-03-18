@@ -44,13 +44,13 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//input[@id=\"1-form.account.properties.displayName\"]",
-            "value": "%account_name%"
+            "value": "@@account_name@"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//input[@id=\"1-form.container.properties.displayName\"]",
-            "value": "%account_name%"
+            "value": "@@account_name@"
          },
          {
             "command": "click",
@@ -139,7 +139,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//input[@data-ng-model=\"ctrl.value\"]",
-            "value": "%gtag%"
+            "value": "@@gtag@"
          },
          {
             "command": "eval_expression",

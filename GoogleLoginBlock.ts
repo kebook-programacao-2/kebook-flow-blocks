@@ -41,17 +41,18 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "goto(window.location.href.replace('glif', 'mn') + '&hl=en-US')"
+            "expression": "env({ new_url: `${ window.location.href.replace('glif', 'mn') }&hl=en-US` })"
          },
          {
-            "command": "wait_for_navigation",
-            "enabled": true
+            "command": "goto",
+            "enabled": true,
+            "target": "@@new_url@"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type='email']",
-            "value": "%email%"
+            "value": "@@email@"
          },
          {
             "command": "click",
@@ -67,16 +68,12 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type='password']",
-            "value": "%password%"
+            "value": "@@password@"
          },
          {
             "command": "click",
             "enabled": true,
             "target": "//*/div//*[text()='Next']"
-         },
-         {
-            "command": "wait_for_navigation",
-            "enabled": true
          },
          {
             "command": "wait_seconds",

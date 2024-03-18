@@ -84,13 +84,13 @@ const PAYLOAD: Payload = {
          {
             "command": "goto",
             "enabled": true,
-            "target": "https://dashboard.kiwify.com.br/members-area/view/%product_id%?tab=content"
+            "target": "https://dashboard.kiwify.com.br/members-area/view/@@product_id@?tab=content"
          },
          {
             "command": "run_flow_for_each",
             "enabled": true,
             "flow": "create_module",
-            "env_var": "%modules%"
+            "env_var": "@@modules@"
          }
       ],
       "create_module": [
@@ -103,7 +103,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/label[text()='Nome do módulo']/following-sibling::div/input",
-            "value": "%module_title%"
+            "value": "@@module_title@"
          },
          {
             "command": "click",
@@ -119,7 +119,7 @@ const PAYLOAD: Payload = {
             "command": "run_flow_for_each",
             "enabled": true,
             "flow": "create_lesson",
-            "env_var": "%module_lessons%"
+            "env_var": "@@module_lessons@"
          }
       ],
       "create_lesson": [
@@ -137,7 +137,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/label[text()='Título']/following-sibling::div/input",
-            "value": "%lesson_title%"
+            "value": "@@lesson_title@"
          },
          {
             "command": "click",
@@ -148,7 +148,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "(//input[@placeholder=\"Buscar....\"])[2]",
-            "value": "%lesson_filename%"
+            "value": "@@lesson_filename@"
          },
          {
             "command": "wait_seconds",

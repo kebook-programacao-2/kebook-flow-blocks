@@ -23,7 +23,7 @@ const PAYLOAD: Payload = {
          {
             "command": "goto",
             "enabled": true,
-            "target": "%playlist_url%"
+            "target": "@@playlist_url@"
          },
          {
             "command": "eval_expression",

@@ -111,7 +111,7 @@ const PAYLOAD: Payload = {
             "command": "run_flow_for_each",
             "enabled": true,
             "flow": "remove_top_offer_section",
-            "env_var": "%prods%"
+            "env_var": "@@prods@"
          }
       ],
       "admin_login": [
@@ -124,13 +124,13 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type='email']",
-            "value": "%email%"
+            "value": "@@email@"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type='password']",
-            "value": "%password%"
+            "value": "@@password@"
          },
          {
             "command": "click",
@@ -151,7 +151,7 @@ const PAYLOAD: Payload = {
          {
             "command": "goto",
             "enabled": true,
-            "target": "https://kronus.kebook.com.br/admin/content/products/%prod_id%"
+            "target": "https://kronus.kebook.com.br/admin/content/products/@@prod_id@"
          },
          {
             "command": "click",
@@ -161,7 +161,7 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "async_eval(6, 1000, (res) => { const removeBtn = x(\"//*/span[@class='collection' and text()='%$$env.section%:']/parent::li//i[@data-icon='close']\"); if (removeBtn) { removeBtn.click() } })"
+            "expression": "async_eval(6, 1000, (res) => { const removeBtn = x(\"//*/span[@class='collection' and text()='@@$$env:section@:']/parent::li//i[@data-icon='close']\"); if (removeBtn) { removeBtn.click() } })"
          },
          {
             "command": "wait_seconds",

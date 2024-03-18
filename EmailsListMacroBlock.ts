@@ -93,7 +93,7 @@ const PAYLOAD: Payload = {
          {
             "command": "goto",
             "enabled": true,
-            "target": "https://emails.kebook.%email_system.value%/login"
+            "target": "https://emails.kebook.@@email_system.value@/login"
          },
          {
             "command": "run_flow",
@@ -104,7 +104,7 @@ const PAYLOAD: Payload = {
             "command": "run_flow_for_each",
             "enabled": true,
             "flow": "create_list",
-            "env_var": "%lists%"
+            "env_var": "@@lists@"
          }
       ],
       "login": [
@@ -112,13 +112,13 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@id='email']",
-            "value": "%login_email%"
+            "value": "@@login_email@"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@name='password']",
-            "value": "%login_password%"
+            "value": "@@login_password@"
          },
          {
             "command": "click",
@@ -139,7 +139,7 @@ const PAYLOAD: Payload = {
          {
             "command": "click",
             "enabled": true,
-            "target": "(//ul[@class=\"dropdown-menu\"])[2]//a[contains(text(), '%$env.brand_name%')]"
+            "target": "(//ul[@class=\"dropdown-menu\"])[2]//a[contains(text(), '@@$$env:brand_name@')]"
          },
          {
             "command": "wait_for_navigation",
@@ -153,7 +153,7 @@ const PAYLOAD: Payload = {
          {
             "command": "goto",
             "enabled": true,
-            "target": "https://emails.kebook.%$env.email_system.value%/list?i=%$env.brand_id%"
+            "target": "https://emails.kebook.@@$$env:email_system.value@/list?i=@@$$env:brand_id@"
          },
          {
             "command": "click",
@@ -164,7 +164,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@id='list_name']",
-            "value": "%list_name%"
+            "value": "@@list_name@"
          },
          {
             "command": "click",
@@ -178,12 +178,12 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "env({ 'list_id_%list_name%': (new URLSearchParams(window.location.search)).get('l') })"
+            "expression": "env({ 'list_id_@@list_name@': (new URLSearchParams(window.location.search)).get('l') })"
          },
          {
             "command": "goto",
             "enabled": true,
-            "target": "https://emails.kebook.%$env.email_system.value%/list?i=%$env.brand_id%"
+            "target": "https://emails.kebook.@@$$env:email_system.value@/list?i=@@$$env:brand_id@"
          },
          {
             "command": "wait_for_navigation",
@@ -192,7 +192,7 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "env({ %list_name%_id: x('//td/a[text()='%list_name%']/parent::td/preceding-sibling::td/span[@class=\"label encrypted-list-id\"]').innerText })"
+            "expression": "env({ @@list_name@_id: x('//td/a[text()='@@list_name@']/parent::td/preceding-sibling::td/span[@class=\"label encrypted-list-id\"]').innerText })"
          }
       ]
    },

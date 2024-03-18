@@ -46,13 +46,13 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type='email']",
-            "value": "%jivo_email%"
+            "value": "@@jivo_email@"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type='password']",
-            "value": "%jivo_password%"
+            "value": "@@jivo_password@"
          },
          {
             "command": "click",
@@ -63,7 +63,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[contains(@placeholder,'Busque')]",
-            "value": "%jivo_url%"
+            "value": "@@jivo_url@"
          },
          {
             "command": "run_flow",
@@ -75,7 +75,7 @@ const PAYLOAD: Payload = {
          {
             "command": "click",
             "enabled": true,
-            "target": "//*/div[contains(text(), '%jivo_url%')]"
+            "target": "//*/div[contains(text(), '@@jivo_url@')]"
          },
          {
             "command": "run_flow",

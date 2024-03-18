@@ -59,19 +59,19 @@ const PAYLOAD: Payload = {
             "command": "run_flow_for_each",
             "enabled": true,
             "flow": "extract_icon",
-            "env_var": "%icons%"
+            "env_var": "@@icons@"
          }
       ],
       "extract_icon": [
          {
             "command": "goto",
             "enabled": true,
-            "target": "%icon_url%"
+            "target": "@@icon_url@"
          },
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "env({ '%icon_name%': x('//a[@data-title=\"Copy React name\"]').innerText })"
+            "expression": "env({ '@@icon_name@': x('//a[@data-title=\"Copy React name\"]').innerText })"
          }
       ]
    },

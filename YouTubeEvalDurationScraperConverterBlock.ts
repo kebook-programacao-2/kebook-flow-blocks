@@ -49,14 +49,14 @@ const PAYLOAD: Payload = {
             "command": "run_flow_for_each",
             "enabled": true,
             "flow": "scrape_video_info",
-            "env_var": "%videos%"
+            "env_var": "@@videos@"
          }
       ],
       "scrape_video_info": [
          {
             "command": "goto",
             "enabled": true,
-            "target": "%video_url%"
+            "target": "@@video_url@"
          },
          {
             "command": "eval_expression",

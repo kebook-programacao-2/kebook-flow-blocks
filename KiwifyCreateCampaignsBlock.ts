@@ -97,13 +97,13 @@ const PAYLOAD: Payload = {
          {
             "command": "goto",
             "enabled": true,
-            "target": "https://dashboard.kiwify.com.br/products/edit/%product_id%?tab=links"
+            "target": "https://dashboard.kiwify.com.br/products/edit/@@product_id@?tab=links"
          },
          {
             "command": "run_flow_for_each",
             "enabled": true,
             "flow": "create_campaign",
-            "env_var": "%campaigns%"
+            "env_var": "@@campaigns@"
          }
       ],
       "create_campaign": [
@@ -116,13 +116,13 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/label[text()='Nome do link']/parent::div/following-sibling::div//input",
-            "value": "%title%"
+            "value": "@@title@"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/label[text()='URL de destino']/parent::div/following-sibling::div//input",
-            "value": "%url%",
+            "value": "@@url@",
             "trigger_onchange_on_tab": true
          },
          {

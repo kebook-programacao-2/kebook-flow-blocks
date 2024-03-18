@@ -39,7 +39,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//input[@mdx-gtm-action=\"Search Universal Picker\"]",
-            "value": "%account_name%"
+            "value": "@@account_name@"
          },
          {
             "command": "wait_seconds",

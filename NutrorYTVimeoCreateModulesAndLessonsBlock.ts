@@ -90,20 +90,20 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "env({ course_home: '%$$env.course_home%'.match(/.*modulos/g)[0] })"
+            "expression": "env({ course_home: '@@$$env:course_home@'.match(/.*modulos/g)[0] })"
          },
          {
             "command": "run_flow_for_each",
             "enabled": true,
             "flow": "create_module",
-            "env_var": "%modules%"
+            "env_var": "@@modules@"
          }
       ],
       "create_module": [
          {
             "command": "goto",
             "enabled": true,
-            "target": "%$$env.course_home%"
+            "target": "@@$$env:course_home@"
          },
          {
             "command": "wait_seconds",
@@ -119,13 +119,13 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@id='module_title']",
-            "value": "%module_title%"
+            "value": "@@module_title@"
          },
          {
             "command": "keyboard_type",
             "enabled": false,
             "target": "//*/input[@id='module_days_locked']",
-            "value": "%module_days_locked%"
+            "value": "@@module_days_locked@"
          },
          {
             "command": "click",
@@ -140,7 +140,7 @@ const PAYLOAD: Payload = {
          {
             "command": "user_click",
             "enabled": true,
-            "target": "//*/h6[text()='%module_title%']"
+            "target": "//*/h6[text()='@@module_title@']"
          },
          {
             "command": "click",
@@ -157,31 +157,31 @@ const PAYLOAD: Payload = {
             "command": "run_flow_for_each",
             "enabled": true,
             "flow": "create_lesson",
-            "env_var": "%module_lessons%"
+            "env_var": "@@module_lessons@"
          }
       ],
       "create_lesson": [
          {
             "command": "goto",
             "enabled": true,
-            "target": "%$$env.course_home%/%$$res.module_id%/aula"
+            "target": "@@$$env:course_home@/@@$$res:module_id@/aula"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/label[text()='Titulo']/following-sibling::div/input",
-            "value": "%lesson_title%"
+            "value": "@@lesson_title@"
          },
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "env({ lesson_description: '%lesson_description%' || '%lesson_title%' })"
+            "expression": "env({ lesson_description: '@@lesson_description@' || '@@lesson_title@' })"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//textarea",
-            "value": "%lesson_description%"
+            "value": "@@lesson_description@"
          },
          {
             "command": "click",
@@ -192,7 +192,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/label[text()='Url']/following-sibling::div/input",
-            "value": "%lesson_link%"
+            "value": "@@lesson_link@"
          },
          {
             "command": "click",

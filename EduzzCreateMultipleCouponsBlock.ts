@@ -297,7 +297,7 @@ const PAYLOAD: Payload = {
             "command": "run_flow_for_each",
             "enabled": true,
             "flow": "create_coupon",
-            "env_var": "%coupons%"
+            "env_var": "@@coupons@"
          }
       ],
       "create_coupon": [
@@ -305,19 +305,19 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@placeholder='Ex.: EDZ-0001']",
-            "value": "%name%"
+            "value": "@@name@"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@maxlength=\"16\"]",
-            "value": "%discount%00"
+            "value": "@@discount@00"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/textarea[@placeholder='Ex.: Cupom promocional']",
-            "value": "%description%"
+            "value": "@description@"
          },
          {
             "command": "run_flow",
@@ -337,7 +337,7 @@ const PAYLOAD: Payload = {
          {
             "command": "user_click",
             "enabled": true,
-            "target": "//*/td[text()='%$$env.product_id%']"
+            "target": "//*/td[text()='@@$$env:product_id@']"
          },
          {
             "command": "click",
@@ -384,7 +384,7 @@ const PAYLOAD: Payload = {
          {
             "command": "click",
             "enabled": true,
-            "target": "//*/td[@title=\"%year%\"]"
+            "target": "//*/td[@title=\"@@year@\"]"
          },
          {
             "command": "wait_seconds",
@@ -399,7 +399,7 @@ const PAYLOAD: Payload = {
          {
             "command": "click",
             "enabled": true,
-            "target": "//*/td[@title=\"%year%-%month%\"]"
+            "target": "//*/td[@title=\"@@year@-@@month@\"]"
          },
          {
             "command": "wait_seconds",
@@ -409,7 +409,7 @@ const PAYLOAD: Payload = {
          {
             "command": "click",
             "enabled": true,
-            "target": "//*/td[@title=\"%year%-%month%-%day%\"]"
+            "target": "//*/td[@title=\"@@year@-@@month@-@@day@\"]"
          },
          {
             "command": "click",

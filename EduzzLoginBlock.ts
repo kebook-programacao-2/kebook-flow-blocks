@@ -37,13 +37,13 @@ const PAYLOAD: Payload = {
             command: "keyboard_type",
             enabled: true,
             target: "//*/input[@type='email']",
-            value: "%login_email%"
+            value: "@@login_email@"
          },
          {
             command: "keyboard_type",
             enabled: true,
             target: "//*/input[@type='password']",
-            value: "%login_password%"
+            value: "@@login_password@"
          },
          {
             command: "user_click",

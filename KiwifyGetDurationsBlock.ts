@@ -21,7 +21,7 @@ const PAYLOAD: Payload = {
          {
             "command": "goto",
             "enabled": true,
-            "target": "%first_lesson%"
+            "target": "@first_lesson@"
          },
          {
             "command": "run_flow",
@@ -87,7 +87,7 @@ const PAYLOAD: Payload = {
             "enabled": true,
             "target": "//*/div[@class=\"plyr__controls__item plyr__time--current plyr__time\"]",
             "attr": "innerText",
-            "response_slot": "%$$res.module_title% >> %$$res.lesson_title%"
+            "response_slot": "@@$$res:module_title@ >> @@$$res:lesson_title@"
          },
          {
             "command": "check_element",

@@ -51,36 +51,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
 const PAYLOAD: Payload = {
    "env": {
       "account_name": "heitorschleder.kebook.com.br/curso/guia-pratico-de-como-utilizar-o-kronus/dev-test-001",  
-      "category": {
-         "value": "Empregos e educação",
-         "__options__": [
-            "Artes e entretenimento",
-            "Automóveis e veículos",
-            "Beleza e fitness",
-            "Livros e literatura",
-            "Comércio e indústria",
-            "Computadores e eletrônicos",
-            "Finanças",
-            "Comidas e bebidas",
-            "Jogos",
-            "Saúde",
-            "Casa e jardim",
-            "Internet e telecomunicações",
-            "Empregos e educação",
-            "Lei e governo",
-            "Notícias",
-            "Comunidades on-line",
-            "Pessoas e sociedade",
-            "Animais de estimação e animais",
-            "Serviços imobiliários",
-            "Referência",
-            "Ciência",
-            "Compras",
-            "Esportes",
-            "Viagens",
-            "Outras atividades comerciais"
-         ]
-      }
+      "category": "Artes e entretenimento"
    },
    "flows": {
       "main_flow": [
@@ -130,7 +101,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@id='name']",
-            "value": "%account_name%"
+            "value": "@@account_name@"
          },
          {
             "command": "click",
@@ -256,7 +227,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@debug-id=\"search-input\"]",
-            "value": "%category%"
+            "value": "@@category@"
          },
          {
             "command": "wait_seconds",
@@ -316,13 +287,13 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@debug-id=\"website-url-input\"]",
-            "value": "%account_name%"
+            "value": "@@account_name@"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@debug-id=\"stream-name-input\"]",
-            "value": "https://%account_name%"
+            "value": "https://@@account_name@"
          },
          {
             "command": "click",

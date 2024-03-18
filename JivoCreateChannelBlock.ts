@@ -80,13 +80,13 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type='email']",
-            "value": "%jivo_email%"
+            "value": "@@jivo_email@"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type='password']",
-            "value": "%jivo_password%"
+            "value": "@@jivo_password@"
          },
          {
             "command": "click",
@@ -97,12 +97,12 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[contains(@placeholder,'Busque')]",
-            "value": "%jivo_url%"
+            "value": "@@jivo_url@"
          },
          {
             "command": "check_element",
             "enabled": true,
-            "target": "//*[text()='%jivo_url%']",
+            "target": "//*[text()='@@jivo_url@']",
             "success_flow": "select_brand_flow",
             "error_flow": "create_brand_flow"
          }
@@ -111,7 +111,7 @@ const PAYLOAD: Payload = {
          {
             "command": "click",
             "enabled": true,
-            "target": "//*/div[contains(text(), '%jivo_url%')]"
+            "target": "//*/div[contains(text(), '@@jivo_url@')]"
          },
          {
             "command": "run_flow",
@@ -144,7 +144,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@name='channelNameInput']",
-            "value": "%jivo_url%"
+            "value": "@@jivo_url@"
          },
          {
             "command": "click",
@@ -311,7 +311,7 @@ const PAYLOAD: Payload = {
          {
             "command": "click",
             "enabled": true,
-            "target": "//*/div[@id='%jivo_theme%' and @data-qa-id='dropdown-option']"
+            "target": "//*/div[@id='@@jivo_theme@' and @data-qa-id='dropdown-option']"
          },
          {
             "command": "click",
@@ -321,7 +321,7 @@ const PAYLOAD: Payload = {
          {
             "command": "chrome_picker_set_color",
             "enabled": true,
-            "color": "%jivo_color%",
+            "color": "@@jivo_color@",
             "trigger_target": "(//*/div[contains(@class, 'colorPickerBtn')])[1]",
             "picker_target": "(//*[contains(@class,'chrome-picker')])[1]//input"
          },

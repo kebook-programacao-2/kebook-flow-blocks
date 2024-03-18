@@ -114,19 +114,19 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "localStorage.setItem('kiwi_device_token_8egvUrhQjiRsxuLSXUdWXhPUBJB3', '%_kiwify_device_token%');"
+            "expression": "localStorage.setItem('kiwi_device_token_8egvUrhQjiRsxuLSXUdWXhPUBJB3', '@@_kiwify_device_token@');"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@name='email']",
-            "value": "%_email%"
+            "value": "@@_email@"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@name='password']",
-            "value": "%_password%"
+            "value": "@@_password@"
          },
          {
             "command": "user_click",
@@ -147,7 +147,7 @@ const PAYLOAD: Payload = {
          {
             "command": "click",
             "enabled": true,
-            "target": "//*/div[contains(@class, 'hidden sticky')]//a[contains(@href, '/?team=')]//*[contains(text(), '%expert_username%')]"
+            "target": "//*/div[contains(@class, 'hidden sticky')]//a[contains(@href, '/?team=')]//*[contains(text(), '@@expert_username@')]"
          },
          {
             "command": "wait_for_navigation",
@@ -163,7 +163,7 @@ const PAYLOAD: Payload = {
          {
             "command": "new_page",
             "enabled": true,
-            "page_id": "%_pages.titan%"
+            "page_id": "@@_pages.titan@"
          },
          {
             "command": "goto",
@@ -174,13 +174,13 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@name=\"email\"]",
-            "value": "%_titan.email%"
+            "value": "@@_titan.email@"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@name=\"password\"]",
-            "value": "%_titan.password%"
+            "value": "@@_titan.password@"
          },
          {
             "command": "click",
@@ -208,13 +208,13 @@ const PAYLOAD: Payload = {
          {
             "command": "select_page",
             "enabled": true,
-            "page_id": "%_pages.main_page%"
+            "page_id": "@_pages.main_page@"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type=\"tel\"]",
-            "value": "%$$res.kiwify_code%",
+            "value": "@@$$res:kiwify_code@",
             "trigger_onchange_on_tab": true
          },
          {
