@@ -192,6 +192,7 @@ export const KronusRemoveSectionBlock = {
     title: 'Kronus - Remove Section',
     block_id: 'b063f31a-79a7-4195-814e-7147708b5254',
     description: 'Removes a section from multiple products.',
+    dependencies: ['24b45134-d2be-48d1-a097-ab04224eebd9'],
     tags: ["kronus","dev"],
     payload: PAYLOAD,
     env_payload: ENV_PAYLOAD

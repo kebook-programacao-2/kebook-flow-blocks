@@ -1,3 +1,7 @@
+import { KronusAdminLoginBlock } from "./KronusAdminLoginBlock";
+import { KronusUpdatePriceBlock } from "./KronusUpdatePriceBlock";
+import { KronusRemoveSectionBlock } from "./KronusRemoveSectionBlock";
+import { KronusUpdateSectionsBlock } from "./KronusUpdateSectionsBlock";
 import { EduzzLoginBlock } from "./EduzzLoginBlock";
 import { EduzzCreateMultipleCouponsBlock } from "./EduzzCreateMultipleCouponsBlock";
 import { NutrorYTVimeoCreateModulesAndLessonsBlock } from "./NutrorYTVimeoCreateModulesAndLessonsBlock";
@@ -12,7 +16,6 @@ import { JivoSearchID } from "./JivoSearchID";
 import { KiwifyYouTubeCreateLessonsBlock } from "./KiwifyYouTubeCreateLessonsBlock";
 import { KiwifyGetDurationsBlock } from "./KiwifyGetDurationsBlock";
 import { TablerIconsScraperBlock } from "./TablerIconsScraperBlock";
-import { KronusRemoveSectionBlock } from "./KronusRemoveSectionBlock";
 import { GoogleLoginBlock } from "./GoogleLoginBlock";
 import { KiwifyCreateLessonsBlock } from "./KiwifyCreateLessonsBlock";
 import { KiwifyMaterialDownloadCreateLessonsBlock } from "./KiwifyMaterialDownloadCreateLessonsBlock";
@@ -20,6 +23,10 @@ import { GoogleAnalyticsGetGTagBlock } from "./GoogleAnalyticsGetGTagBlock";
 import { GoogleAnalyticsCreateGTMTagBlock } from "./GoogleAnalyticsCreateGTMTagBlock";
 
 export const FlowBlocks = [
+   KronusAdminLoginBlock,
+   KronusUpdatePriceBlock,
+   KronusUpdateSectionsBlock,
+   KronusRemoveSectionBlock,
    GoogleLoginBlock,
    GoogleAnalyticsCreatePropertyBlock,
    GoogleAnalyticsGetGTagBlock,
@@ -38,6 +45,5 @@ export const FlowBlocks = [
    JivoSearchID,
    YouTubeEvalDurationScraperConverterBlock,
    YouTubeScrapePlaylistDataBlock,
-   TablerIconsScraperBlock,
-   KronusRemoveSectionBlock
+   TablerIconsScraperBlock
 ];

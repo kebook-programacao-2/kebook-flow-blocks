@@ -229,6 +229,16 @@ const PAYLOAD: Payload = {
             "target": "//*/div[text()='Instalação']"
          },
          {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "2000"
+         },
+         {
+            "command": "eval_expression",
+            "enabled": true,
+            "expression": "async_eval(5, 1000, (res) => res({ jivo_brand: x('//div[@class=\"text-label-large line-clamp-1 inline\"][2]').innerText }))"
+         },
+         {
             "command": "eval_expression",
             "enabled": true,
             "expression": "async_eval(5, 1000, (res) => res({ jivo_id: x('//textarea[@data-qa-id=\"widget-install-code-textarea\"]').value.match(/(?<=widget\\/).*(?=\")/g)[0] }))"

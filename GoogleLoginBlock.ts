@@ -62,7 +62,7 @@ const PAYLOAD: Payload = {
          {
             "command": "wait_seconds",
             "enabled": true,
-            "time": "4000"
+            "time": "6537"
          },
          {
             "command": "keyboard_type",
