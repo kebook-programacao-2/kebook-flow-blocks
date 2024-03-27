@@ -111,6 +111,11 @@ const PAYLOAD: Payload = {
             "target": "//button[@data-ng-click=\"ctrl.openCreateSheet()\"]"
          },
          {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "3000"
+         },
+         {
             "command": "eval_expression",
             "enabled": true,
             "expression": "set_element_value('//div[@name=\"variable.data.name\"]', 'auto', 'innerText')"
