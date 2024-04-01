@@ -89,7 +89,7 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "async_eval(6, 1000, (res) => res({ gtm_tag: x(\"(//textarea[contains(@class, 'gtm-snippet__textarea')])[2]\")?.value?.match(/GTM-.*(?=\")/g)[0] || 'Tag not found' }))"
+            "expression": "async_eval(6, 1000, (res) => { const gtm_tag = x(\"(//textarea[contains(@class, 'gtm-snippet__textarea')])[2]\")?.value?.match(/GTM-.*(?=\")/g)[0]; gtm_tag && res({ gtm_tag: gtm_tag }) })"
          },
          {
             "command": "click",
@@ -231,6 +231,82 @@ const PAYLOAD: Payload = {
             "command": "eval_expression",
             "enabled": true,
             "expression": "set_element_value('//div[@data-ng-model=\"ctrl.tag.data.name\"]', 'auto_tag', 'innerText')"
+         },
+         {
+            "command": "click",
+            "enabled": true,
+            "target": "//button[@type=\"submit\"]"
+         },
+         {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "3000"
+         },
+         {
+            "command": "click",
+            "enabled": true,
+            "target": "//button[@data-ng-click=\"ctrl.openCreateSheet()\"]"
+         },
+         {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "2000"
+         },
+         {
+            "command": "click",
+            "enabled": true,
+            "target": "(//div[@class=\"gtm-veditor-section-overlay wd-veditor-section-overlay\"])[1]"
+         },
+         {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "3000"
+         },
+         {
+            "command": "click",
+            "enabled": true,
+            "target": "//td[contains(text(), ' Google Ads ')]"
+         },
+         {
+            "command": "click",
+            "enabled": true,
+            "target": "//div[@ng-bind-html=\"::type.displayName\" and contains(text(), \"Tag do Google\")]"
+         },
+         {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "2000"
+         },
+         {
+            "command": "keyboard_type",
+            "enabled": true,
+            "target": "//div[contains(@class, \"gtm-text-addon\")]/input",
+            "value": "{{auto}}"
+         },
+         {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "3000"
+         },
+         {
+            "command": "click",
+            "enabled": true,
+            "target": "(//div[@class=\"gtm-veditor-section-overlay wd-veditor-section-overlay\"])[2]"
+         },
+         {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "3000"
+         },
+         {
+            "command": "click",
+            "enabled": true,
+            "target": "//div[text()='All Pages']"
+         },
+         {
+            "command": "eval_expression",
+            "enabled": true,
+            "expression": "set_element_value('//div[@data-ng-model=\"ctrl.tag.data.name\"]', 'ads_auto_tag', 'innerText')"
          },
          {
             "command": "click",

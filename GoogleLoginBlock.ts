@@ -41,7 +41,7 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "env({ new_url: `${ window.location.href.replace('glif', 'mn') }&hl=en-US` })"
+            "expression": "env({ '@private:new_url': `${ window.location.href.replace('glif', 'mn') }&hl=en-US` })"
          },
          {
             "command": "goto",
