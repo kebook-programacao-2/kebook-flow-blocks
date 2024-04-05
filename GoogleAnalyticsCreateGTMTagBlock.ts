@@ -243,6 +243,38 @@ const PAYLOAD: Payload = {
             "time": "3000"
          },
          {
+            "command": "run_flow",
+            "enabled": false,
+            "flow": "google_ads"
+         },
+         {
+            "command": "click",
+            "enabled": true,
+            "target": "//button[@data-ng-click=\"ctrl.submit()\"]"
+         },
+         {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "2000"
+         },
+         {
+            "command": "click",
+            "enabled": true,
+            "target": "//button[contains(text(), ' Publicar ')]"
+         },
+         {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "2000"
+         },
+         {
+            "command": "click",
+            "enabled": true,
+            "target": "//button[contains(text(), 'Continuar')]"
+         }
+      ],
+      "google_ads": [
+         {
             "command": "click",
             "enabled": true,
             "target": "//button[@data-ng-click=\"ctrl.openCreateSheet()\"]"
@@ -317,31 +349,6 @@ const PAYLOAD: Payload = {
             "command": "wait_seconds",
             "enabled": true,
             "time": "3000"
-         },
-         {
-            "command": "click",
-            "enabled": true,
-            "target": "//button[@data-ng-click=\"ctrl.submit()\"]"
-         },
-         {
-            "command": "wait_seconds",
-            "enabled": true,
-            "time": "2000"
-         },
-         {
-            "command": "click",
-            "enabled": true,
-            "target": "//button[contains(text(), ' Publicar ')]"
-         },
-         {
-            "command": "wait_seconds",
-            "enabled": true,
-            "time": "2000"
-         },
-         {
-            "command": "click",
-            "enabled": true,
-            "target": "//button[contains(text(), 'Continuar')]"
          }
       ]
    },

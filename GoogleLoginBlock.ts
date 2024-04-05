@@ -36,17 +36,22 @@ const PAYLOAD: Payload = {
          {
             "command": "goto",
             "enabled": true,
-            "target": "https://analytics.google.com/analytics/web"
+            "target": "https://accounts.google.com/ServiceLogin?hl=en-US&theme=mn&passive=true&continue=https://www.google.com/&ec=GAZAmgQ"
          },
          {
             "command": "eval_expression",
-            "enabled": true,
+            "enabled": false,
             "expression": "env({ '@private:new_url': `${ window.location.href.replace('glif', 'mn') }&hl=en-US` })"
          },
          {
             "command": "goto",
-            "enabled": true,
+            "enabled": false,
             "target": "@@new_url@"
+         },
+         {
+            "command": "screenshot",
+            "enabled": true,
+            "filename": "google_login_001.png"
          },
          {
             "command": "keyboard_type",

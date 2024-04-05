@@ -5,7 +5,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
       "value": "",
       "schema": {
          "label": "URL da Playlist",
-         "placeholder": "https://www.youtube.com/playlist?list=PLKwNxYxOKPJTlBHtyFkV4Z9ZqJaWtqXGO",
+         "placeholder": "https://www.youtube.com/playlist?list=PL4G2ZPtawqeuUNVEPtiJg8jP3ADHUG4Vv",
          "type": "text"
       }
    }
@@ -16,7 +16,7 @@ const PAYLOAD: Payload = {
       "_pages": {
          "main_page": "main_page"
       },
-      "playlist_url": "https://www.youtube.com/playlist?list=PL4G2ZPtawqeuUNVEPtiJg8jP3ADHUG4Vv"
+      "playlist_url": "https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w"
    },
    "flows": {
       "main_flow": [
@@ -28,7 +28,7 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "expose({ videos_count: parseInt(x(\"//*/div[contains(@class, 'metadata-stats')]//span[1]\").innerText) });"
+            "expression": "env({ '@expose:videos_count': parseInt(x(\"//*/div[contains(@class, 'metadata-stats')]//span[1]\").innerText) });"
          },
          {
             "command": "run_flow",
@@ -45,7 +45,7 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "_$fb_vars.videos_count -= 100"
+            "expression": "_$fb.videos_count -= 100"
          },
          {
             "command": "run_flow",
@@ -57,7 +57,7 @@ const PAYLOAD: Payload = {
          {
             "command": "branch_eval",
             "enabled": true,
-            "expression": "_$fb_vars.videos_count > 99",
+            "expression": "_$fb.videos_count > 99",
             "success_flow": "press_end",
             "error_flow": "scrape"
          }

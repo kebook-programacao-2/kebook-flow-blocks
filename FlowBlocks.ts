@@ -21,6 +21,7 @@ import { KiwifyCreateLessonsBlock } from "./KiwifyCreateLessonsBlock";
 import { KiwifyMaterialDownloadCreateLessonsBlock } from "./KiwifyMaterialDownloadCreateLessonsBlock";
 import { GoogleAnalyticsGetGTagBlock } from "./GoogleAnalyticsGetGTagBlock";
 import { GoogleAnalyticsCreateGTMTagBlock } from "./GoogleAnalyticsCreateGTMTagBlock";
+import { NutrorSafeVideoDurationScraperBlock } from "./NutrorSafeVideoDurationScraperBlock";
 
 export const FlowBlocks = [
    KronusAdminLoginBlock,
@@ -35,6 +36,7 @@ export const FlowBlocks = [
    EduzzCreateMultipleCouponsBlock,
    NutrorYTVimeoCreateModulesAndLessonsBlock,
    NutrorSafeVideoCreateModulesAndLessonsBlock,
+   NutrorSafeVideoDurationScraperBlock,
    KiwifyLoginBlock,
    KiwifyCreateCampaignsBlock,
    KiwifyCreateLessonsBlock,
