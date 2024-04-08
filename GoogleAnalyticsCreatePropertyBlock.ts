@@ -189,6 +189,11 @@ const PAYLOAD: Payload = {
       ],
       "navigate_admin": [
          {
+            "command": "goto",
+            "enabled": true,
+            "target": "https://analytics.google.com/analytics/web?hl=pt-BR"
+         },
+         {
             "command": "click",
             "enabled": true,
             "target": "//*/a//span[text()='Administrador']"
