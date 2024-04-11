@@ -65,10 +65,15 @@ const PAYLOAD: Payload = {
             "target": "//*/div//*[text()='Next']"
          },
          {
-            "command": "wait_seconds",
+            "command": "branch_eval",
             "enabled": true,
-            "time": "6537"
-         },
+            // "expression": "async_eval(60, 1000, (res) => { const correctPasswordInput = x(`//input[@name=\"Passwd\"]`); correctPasswordInput && res(correctPasswordInput); })",
+            "expression": "wait_for_element(90, `//input[@name=\"Passwd\"]`)",
+            "success_flow": "captcha_pass",
+            "error_flow": "auth_error"
+         }
+      ],
+      "captcha_pass": [
          {
             "command": "keyboard_type",
             "enabled": true,
@@ -102,6 +107,13 @@ const PAYLOAD: Payload = {
          {
             "command": "close_browser",
             "enabled": true
+         }
+      ],
+      "auth_error": [
+         {
+            "command": "eval_expression",
+            "enabled": true,
+            "expression": "env({ auth_error: 'Erro ao autenticar o login no Google.' })"
          }
       ]
    },
