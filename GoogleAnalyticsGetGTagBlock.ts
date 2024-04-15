@@ -28,7 +28,17 @@ const PAYLOAD: Payload = {
          {
             "command": "goto",
             "enabled": true,
-            "target": "https://analytics.google.com/analytics/web?hl=pt-BR"
+            "target": "https://analytics.google.com/analytics"
+         },
+         {
+            "command": "eval_expression",
+            "enabled": false,
+            "expression": "goto('https://analytics.google.com/analytics/web?hl=pt-BR')"
+         },
+         {
+            "command": "wait_for_dom_render",
+            "enabled": false,
+            "time": ""
          },
          {
             "command": "click",

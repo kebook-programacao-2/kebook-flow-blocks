@@ -75,6 +75,11 @@ const PAYLOAD: Payload = {
       ],
       "captcha_pass": [
          {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "3000"
+         },
+         {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type='password']",
