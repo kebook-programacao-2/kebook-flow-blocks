@@ -11,7 +11,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
          "fields_type": "select",
          "options": [
             {
-               "label": "🍆 Dev da Silva",
+               "label": "Dev da Silva",
                "value": "Dev da Silva"
             },
             "Vinicio Junio de Oliveira",
@@ -136,7 +136,7 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "env({ recaptcha_error: x(\"//*/[contains(text(), 'Recaptcha Error')]\")?.innerText || 'None found' })"
+            "expression": "env({ recaptcha_error: x(\"//*[contains(text(), 'Recaptcha Error')]\")?.innerText || 'None found' })"
          },
          {
             "command": "wait_for_navigation",
