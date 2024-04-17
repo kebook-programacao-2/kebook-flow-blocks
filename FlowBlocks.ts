@@ -23,6 +23,8 @@ import { GoogleAnalyticsGetGTagBlock } from "./GoogleAnalyticsGetGTagBlock";
 import { GoogleAnalyticsCreateGTMTagBlock } from "./GoogleAnalyticsCreateGTMTagBlock";
 import { NutrorSafeVideoDurationScraperBlock } from "./NutrorSafeVideoDurationScraperBlock";
 import { GoogleAdWordsGTMBlock } from "./GoogleAdWordsGTMBlock";
+import { ToolCheckGTMBlock } from "./ToolCheckGTM";
+import { ToolKiwifyGetUsersBlock } from "./ToolKiwifyGetUsersBlock";
 
 export const FlowBlocks = [
    GoogleLoginBlock,
@@ -49,5 +51,7 @@ export const FlowBlocks = [
    KronusAdminLoginBlock,
    KronusUpdatePriceBlock,
    KronusUpdateSectionsBlock,
-   KronusRemoveSectionBlock
+   KronusRemoveSectionBlock,
+   ToolCheckGTMBlock,
+   ToolKiwifyGetUsersBlock
 ];

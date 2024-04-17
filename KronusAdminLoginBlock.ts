@@ -75,7 +75,6 @@ export const KronusAdminLoginBlock: BlockProps = {
     title: 'Kronus - Admin Login',
     block_id: '24b45134-d2be-48d1-a097-ab04224eebd9',
     description: 'Kronus admin login.',
-    dependencies: [],
     tags: ["kronus","dev"],
     payload: PAYLOAD,
     env_payload: ENV_PAYLOAD

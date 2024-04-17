@@ -7,66 +7,241 @@ const ENV_PAYLOAD: EnvPayloadModel = {
       "schema": {
          "label": "Nome de usuário",
          "tooltip": "Nome do usuário do expert",
-         "placeholder": "Dev da Silva",
+         "placeholder": "Selecione um usuário",
          "fields_type": "select",
          "options": [
             {
                "label": "Dev da Silva",
                "value": "Dev da Silva"
             },
-            "Vinicio Junio de Oliveira",
-            "Fernanda Aparecida Massa Tex",
-            "NATHALIE LOCKLEY",
-            "Aline silveira Rosa",
-            "andressa pinheiro freire",
-            "CARLOS WILSON DE SOUZA PEREIRA 72930420600",
-            "WLADIMIR HENRIQUE BUOSI",
-            "LUCAS DE OLIVEIRA SANTOS 12",
-            "poliana dos santos bonze",
-            // "Kebook LTDA",
-            "42181433000130",
             {
-               "label": "Lucimar Beatriz",
+               "label": "Vinicio Junio de Oliveira",
+               "value": "Vinicio Junio de Oliveira"
+            },
+            {
+               "label": "Fernanda Aparecida Massa Tex",
+               "value": "Fernanda Aparecida Massa Tex"
+            },
+            {
+               "label": "NATHALIE LOCKLEY",
+               "value": "NATHALIE LOCKLEY"
+            },
+            {
+               "label": "Aline silveira Rosa",
+               "value": "Aline silveira Rosa"
+            },
+            {
+               "label": "andressa pinheiro freire",
+               "value": "andressa pinheiro freire"
+            },
+            {
+               "label": "CARLOS WILSON DE SOUZA PEREIRA 72930420600",
+               "value": "CARLOS WILSON DE SOUZA PEREIRA 72930420600"
+            },
+            {
+               "label": "WLADIMIR HENRIQUE BUOSI",
+               "value": "WLADIMIR HENRIQUE BUOSI"
+            },
+            {
+               "label": "poliana dos santos bonze",
+               "value": "poliana dos santos bonze"
+            },
+            // {
+            //    "label": "Kebook LTDA",
+            //    "value": "Kebook LTDA"
+            // },
+            {
+               "label": "Marcelo Ricardo de Carvalho Ribeiro",
+               "value": "42181433000130"
+            },
+            {
+               "label": "LUCIMAR BEATRIZ DOS SANTOS 02075732043",
                "value": "LUCIMAR BEATRIZ DOS SANTOS 02075732043"
             },
-            "leandro santo marques",
-            "Moadir mariano da Silva",
-            "Thaís aparecida Marques da Silva",
-            "Gustavo Vinicius Pina Martins",
+            {
+               "label": "leandro santo marques",
+               "value": "leandro santo marques"
+            },
+            {
+               "label": "Moadir mariano da Silva",
+               "value": "Moadir mariano da Silva"
+            },
+            {
+               "label": "Thaís aparecida Marques da Silva",
+               "value": "Thaís aparecida Marques da Silva"
+            },
+            {
+               "label": "Gustavo Vinicius Pina Martins",
+               "value": "Gustavo Vinicius Pina Martins"
+            },
             {
                "label": "Amanda Loren",
                "value": "AMANDA LOREN DE OLIVEIRA COLPAS 30187981809"
             },
-            "Marcelo Fenoll Ramal",
-            "CLEVERSON MARTINS TEIXEIRA",
-            "Thiago Gomes Vegette",
-            "Geane de Lima Santana Carvalho",
-            "wagner luiz do nascimento silva",
-            "Gorete Aparecida Souza Perin",
-            "Maria Daniely Oliveira da Silva",
-            "neldson alves batista",
-            "João Vitor Barbosa de Carlos",
-            "canaltopreceitas@gmail.com",
-            "Maikelane Lopes da Cruz silva",
-            "Bernardo de Oliveira Fernandes",
-            "SABEDORIA DA MULHER EMPREENDIMENTOS ONLINE",
-            "Amanda Lima da Silva",
-            "José Roberto da Conceiçao",
-            "Sandra Maria Rodrigues",
-            "R. GALVAO NASCIMENTO LTDA",
-            "Mario Hermes de Jesus Sobral",
-            "HENRIQUE GUIRRA BONFIM",
-            "Renato Goetten",
+            {
+               "label": "Marcelo Fenoll Ramal",
+               "value": "Marcelo Fenoll Ramal"
+            },
+            {
+               "label": "CLEVERSON MARTINS TEIXEIRA",
+               "value": "CLEVERSON MARTINS TEIXEIRA"
+            },
+            {
+               "label": "Thiago Gomes Vegette",
+               "value": "Thiago Gomes Vegette"
+            },
+            {
+               "label": "Geane de Lima Santana Carvalho",
+               "value": "Geane de Lima Santana Carvalho"
+            },
+            {
+               "label": "wagner luiz do nascimento silva",
+               "value": "wagner luiz do nascimento silva"
+            },
+            {
+               "label": "Gorete Aparecida Souza Perin",
+               "value": "Gorete Aparecida Souza Perin"
+            },
+            {
+               "label": "Maria Daniely Oliveira da Silva",
+               "value": "Maria Daniely Oliveira da Silva"
+            },
+            {
+               "label": "Leopoldo Rojas Gavilan",
+               "value": "Leopoldo Rojas Gavilan"
+            },
+            {
+               "label": "neldson alves batista",
+               "value": "neldson alves batista"
+            },
+            {
+               "label": "João Vitor Barbosa de Carlos",
+               "value": "João Vitor Barbosa de Carlos"
+            },
+            {
+               "label": "canaltopreceitas@gmail.com",
+               "value": "canaltopreceitas@gmail.com"
+            },
+            {
+               "label": "melificafsi@gmail.com",
+               "value": "melificafsi@gmail.com"
+            },
+            {
+               "label": "Maikelane Lopes da Cruz silva",
+               "value": "Maikelane Lopes da Cruz silva"
+            },
+            {
+               "label": "Bernardo de Oliveira Fernandes",
+               "value": "Bernardo de Oliveira Fernandes"
+            },
+            {
+               "label": "SABEDORIA DA MULHER EMPREENDIMENTOS ONLINE LTDA",
+               "value": "SABEDORIA DA MULHER EMPREENDIMENTOS ONLINE LTDA"
+            },
+            {
+               "label": "LUCAS DE OLIVEIRA SANTOS 12",
+               "value": "LUCAS DE OLIVEIRA SANTOS 12"
+            },
+            {
+               "label": "Amanda Lima da Silva",
+               "value": "Amanda Lima da Silva"
+            },
+            {
+               "label": "José Roberto  da Conceiçao",
+               "value": "José Roberto  da Conceiçao"
+            },
+            {
+               "label": "Sandra Maria Rodrigues",
+               "value": "Sandra Maria Rodrigues"
+            },
+            {
+               "label": "Raphael Galvao",
+               "value": "R. GALVAO NASCIMENTO LTDA"
+            },
+            {
+               "label": "Mario Hermes de Jesus Sobral",
+               "value": "Mario Hermes de Jesus Sobral"
+            },
+            {
+               "label": "HENRIQUE GUIRRA BONFIM",
+               "value": "HENRIQUE GUIRRA BONFIM"
+            },
+            {
+               "label": "Renato Goetten",
+               "value": "Renato Goetten"
+            },
             {
                "label": "Oton Safraide",
                "value": "S O ESTUDIO LTDA"
             },
-            "RODRIGO REIS DE GODOY 38273367835",
-            "Jaize Barreto da Silveira",
-            "Danielle Celi Vitor de Barros",
-            "Rute Lacerda Tarelho",
-            "Betel BRS LTDA",
-            "Luis Fernando de Moraes"
+            {
+               "label": "Rodrigo Godoy",
+               "value": "35.590.954 RODRIGO REIS DE GODOY"
+            },
+            {
+               "label": "Jaize Barreto da Silveira",
+               "value": "Jaize Barreto da Silveira"
+            },
+            {
+               "label": "Danielle Celi Vitor de Barros",
+               "value": "Danielle Celi Vitor de Barros"
+            },
+            {
+               "label": "Rute Lacerda Tarelho",
+               "value": "Rute Lacerda Tarelho"
+            },
+            {
+               "label": "Ray Siqueira",
+               "value": "BETEL BRS LTDA"
+            },
+            {
+               "label": "Luis Fernando de Moraes",
+               "value": "Luis Fernando de Moraes"
+            },
+            {
+               "label": "Antonio Mariano Montandon Lauro Jardim",
+               "value": "Antonio Mariano Montandon Lauro Jardim"
+            },
+            {
+               "label": "AMANDA LYSSA BATISTA DE JESUS FERNANDES",
+               "value": "AMANDA LYSSA BATISTA DE JESUS FERNANDES"
+            },
+            {
+               "label": "José Paulo Sebastiao da Silva",
+               "value": "José Paulo Sebastiao da Silva"
+            },
+            {
+               "label": "Fabíola da Silva Pereira",
+               "value": "Fabíola da Silva Pereira"
+            },
+            {
+               "label": "Eduardo Lauro Jardim",
+               "value": "Eduardo Lauro Jardim"
+            },
+            {
+               "label": "LEIA FERREIRA DA SILVA",
+               "value": "LEIA FERREIRA DA SILVA"
+            },
+            {
+               "label": "Jessiane Santos",
+               "value": "cursojessy@gmail.com"
+            },
+            {
+               "label": "CLEONICE PEREIRA SANTOS SILVA",
+               "value": "CLEONICE PEREIRA SANTOS SILVA"
+            },
+            {
+               "label": "Luiz Fernandes Neves",
+               "value": "Luiz Fernandes Neves"
+            },
+            {
+               "label": "Cristiane de Souza Moura",
+               "value": "Cristiane de Souza Moura"
+            },
+            {
+               "label": "Bruna Vieira",
+               "value": "brunna.paganini@hotmail.com"
+            }
          ]
       }
    }
@@ -150,13 +325,9 @@ const PAYLOAD: Payload = {
             "target": "//*/div[contains(@class, 'hidden sticky')]//a[contains(@href, '/?team=')]//*[contains(text(), '@@expert_username@')]"
          },
          {
-            "command": "wait_for_navigation",
-            "enabled": true
-         },
-         {
-            "command": "screenshot",
-            "enabled": false,
-            "filename": "kiwify.png"
+            "command": "wait_for_dom_render",
+            "enabled": true,
+            "time": ""
          }
       ],
       "get_2fa_code": [
