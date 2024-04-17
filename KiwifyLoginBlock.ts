@@ -123,7 +123,7 @@ const ENV_PAYLOAD: EnvPayloadModel = {
                "value": "canaltopreceitas@gmail.com"
             },
             {
-               "label": "melificafsi@gmail.com",
+               "label": "Hiago Alves (Melifica)",
                "value": "melificafsi@gmail.com"
             },
             {
