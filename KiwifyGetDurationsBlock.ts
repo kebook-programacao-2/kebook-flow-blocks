@@ -21,7 +21,7 @@ const PAYLOAD: Payload = {
          {
             "command": "goto",
             "enabled": true,
-            "target": "@first_lesson@"
+            "target": "@@first_lesson@"
          },
          {
             "command": "run_flow",

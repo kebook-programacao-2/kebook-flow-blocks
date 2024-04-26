@@ -317,7 +317,7 @@ const PAYLOAD: Payload = {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/textarea[@placeholder='Ex.: Cupom promocional']",
-            "value": "@description@"
+            "value": "@@description@"
          },
          {
             "command": "run_flow",

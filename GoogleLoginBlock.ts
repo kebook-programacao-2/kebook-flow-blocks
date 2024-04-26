@@ -49,15 +49,20 @@ const PAYLOAD: Payload = {
             "target": "@@new_url@"
          },
          {
-            "command": "screenshot",
+            "command": "wait_seconds",
             "enabled": true,
-            "filename": "google_login_001.png"
+            "time": "2000"
          },
          {
             "command": "keyboard_type",
             "enabled": true,
             "target": "//*/input[@type='email']",
             "value": "@@email@"
+         },
+         {
+            "command": "wait_seconds",
+            "enabled": true,
+            "time": "2000"
          },
          {
             "command": "click",
