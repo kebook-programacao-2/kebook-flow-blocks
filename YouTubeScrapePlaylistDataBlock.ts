@@ -66,7 +66,7 @@ const PAYLOAD: Payload = {
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "(() => ({    videos: xxx('//*/div[@id=\"content\"]//div[@id=\"content\"]').map((video, index) => {    const time = x(`(//*/div[@id=\"content\"]//div[@id=\"content\"])[${ index + 1 }]//div[@id=\"time-status\"]`).innerText.trim();    const [sec, min, hour] = time.split(':').reverse();    const time_in_seconds = ((parseInt(hour) || 0) * 3600) + ((parseInt(min) || 0) * 60) + parseInt(sec);     const title = x(`(//*/div[@id=\"content\"]//div[@id=\"content\"])[${ index + 1 }]//a[@id=\"video-title\"]`).title;    const link = x(`(//*/div[@id=\"content\"]//div[@id=\"content\"])[${ index + 1 }]//a[@id=\"video-title\"]`).href.match(/.*(?=&list=)/gi)[0];     return {       index: index + 1,       time,       time_in_seconds,       lesson_title: title,       lesson_link: link    } }) }))()"
+            "expression": "(() => ({ videos: xxx('//*/div[@id=\"content\"]//div[@id=\"content\"]').map((_, _index) => {\n   try {\n      const time = x(`(//div[@id=\"time-status\"])[${_index + 1}]`).innerText.trim(); \n      const [sec, min, hour] = time.split(':').reverse(); \n      const time_in_seconds = ((parseInt(hour) || 0) * 3600) + ((parseInt(min) || 0) * 60) + parseInt(sec); \n      const title = x(`(//a[@id=\"video-title\"])[${_index + 1}]`).title; \n      const link = x(`(//a[@id=\"video-title\"])[${_index + 1}]`).href.match(/.*(?=&list=)/gi)[0]; \n      return { vid_index: _index + 1, time, time_in_seconds, lesson_title: title, lesson_link: link } \n   } catch (err) { console.error('[FLOW_BUIDER_ERROR]', err); }\n}).filter(v => v) }))()"
          }
       ]
    },

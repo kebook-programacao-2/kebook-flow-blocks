@@ -8,7 +8,7 @@ import { NutrorYTVimeoCreateModulesAndLessonsBlock } from "./NutrorYTVimeoCreate
 import { NutrorSafeVideoCreateModulesAndLessonsBlock } from "./NutrorSafeVideoCreateModulesAndLessonsBlock";
 import { GoogleAnalyticsCreatePropertyBlock } from "./GoogleAnalyticsCreatePropertyBlock";
 import { JivoCreateChannelBlock } from "./JivoCreateChannelBlock";
-import { YouTubeEvalDurationScraperConverterBlock } from "./YouTubeEvalDurationScraperConverterBlock";
+import { YouTubeScrapeSingleVideoBlock } from "./YouTubeScrapeSingleVideoBlock";
 import { KiwifyLoginBlock } from "./KiwifyLoginBlock";
 import { KiwifyCreateCampaignsBlock } from "./KiwifyCreateCampaignsBlock";
 import { YouTubeScrapePlaylistDataBlock } from "./YouTubeScrapePlaylistDataBlock";
@@ -25,6 +25,7 @@ import { NutrorSafeVideoDurationScraperBlock } from "./NutrorSafeVideoDurationSc
 import { GoogleAdWordsGTMBlock } from "./GoogleAdWordsGTMBlock";
 import { ToolCheckGTMBlock } from "./ToolCheckGTM";
 import { ToolKiwifyGetUsersBlock } from "./ToolKiwifyGetUsersBlock";
+import { KiwifyCreateCouponsBlock } from "./KiwifyCreateCouponsBlock";
 
 export const FlowBlocks = [
    GoogleLoginBlock,
@@ -38,6 +39,7 @@ export const FlowBlocks = [
    NutrorSafeVideoCreateModulesAndLessonsBlock,
    NutrorSafeVideoDurationScraperBlock,
    KiwifyLoginBlock,
+   KiwifyCreateCouponsBlock,
    KiwifyCreateCampaignsBlock,
    KiwifyCreateLessonsBlock,
    KiwifyMaterialDownloadCreateLessonsBlock,
@@ -45,7 +47,7 @@ export const FlowBlocks = [
    KiwifyGetDurationsBlock,
    JivoCreateChannelBlock,
    JivoSearchID,
-   YouTubeEvalDurationScraperConverterBlock,
+   YouTubeScrapeSingleVideoBlock,
    YouTubeScrapePlaylistDataBlock,
    TablerIconsScraperBlock,
    KronusAdminLoginBlock,

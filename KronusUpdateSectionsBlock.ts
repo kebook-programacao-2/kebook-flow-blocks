@@ -186,7 +186,8 @@ const PAYLOAD: Payload = {
          {
             "command": "click",
             "enabled": true,
-            "target": "//*[@id=\"sidebar\"]/div/div[1]/div[5]/div/div/div[1]/div[8]/div/button"
+            "description": "Clicks on the button to generate a single section.",
+            "target": "(//*[@id=\"sidebar\"]//button[contains(@class, \"full-width\")])[10]"
          },
          {
             "command": "wait_seconds",
