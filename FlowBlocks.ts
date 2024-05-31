@@ -26,6 +26,7 @@ import { GoogleAdWordsGTMBlock } from "./GoogleAdWordsGTMBlock";
 import { ToolCheckGTMBlock } from "./ToolCheckGTM";
 import { ToolKiwifyGetUsersBlock } from "./ToolKiwifyGetUsersBlock";
 import { KiwifyCreateCouponsBlock } from "./KiwifyCreateCouponsBlock";
+import { KiwifyGetIntegratedVideosDurationsBlock } from "./KiwifyGetIntegratedVideosDurationsBlock";
 
 export const FlowBlocks = [
    GoogleLoginBlock,
@@ -44,7 +45,8 @@ export const FlowBlocks = [
    KiwifyCreateLessonsBlock,
    KiwifyMaterialDownloadCreateLessonsBlock,
    KiwifyYouTubeCreateLessonsBlock,
-   KiwifyGetDurationsBlock,
+   // KiwifyGetDurationsBlock,
+   KiwifyGetIntegratedVideosDurationsBlock,
    JivoCreateChannelBlock,
    JivoSearchID,
    YouTubeScrapeSingleVideoBlock,
