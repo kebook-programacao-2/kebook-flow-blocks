@@ -308,12 +308,21 @@ const PAYLOAD: Payload = {
          {
             "command": "wait_seconds",
             "enabled": true,
-            "time": "6000"
+            "time": "5000"
+         },
+         {
+            "command": "attach_to_iframe",
+            "enabled": true,
+            "xpath": "//iframe[contains(@class, \"ogt-iframe\")]"
          },
          {
             "command": "eval_expression",
             "enabled": true,
-            "expression": "env({ gtag: x('//div[@guidedhelpid=\"measurement-id\"]')?.innerText?.match(/.*(?=\\n)/g)[0] })"
+            "expression": "async_eval(20, 1000, (res) => { const gtag = x(`//div[@class=\"ogt-snippet\"]`)?.innerText?.match(/G-[^\"']+/g)?.[0]; gtag && res({ gtag }); })"
+         },
+         {
+            "command": "detach_from_iframe",
+            "enabled": true
          }
       ]
    },
