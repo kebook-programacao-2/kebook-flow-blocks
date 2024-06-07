@@ -289,12 +289,12 @@ const PAYLOAD: Payload = {
          {
             "command": "click",
             "enabled": true,
-            "target": "//*/button/span[text()='Durante a conversa']"
+            "target": "//h2[text()=\"Formulário de contato\"]/following-sibling::div[2]"
          },
          {
             "command": "click",
             "enabled": true,
-            "target": "//*/li[@title='Desativar']"
+            "target": "//div[contains(@data-qa-id, \"option-2\") and text()=\"Desativar\"]"
          }
       ],
       "design_flow": [
